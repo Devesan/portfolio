@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Population vs  Sample</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="site.css" > 
+</head>
+<body>
+    <div class="jumbotron">
+      <div class="container">
+        <h1>Prepare</h1>
+        <ul>
+          <li>Population and Sample</li>
+          <ul>
+            <li>Comparing Population and Sample</li>
+            <li>Comparing Statistic and Parameter</li>
+            <li>Infering a population from a sample</li>
+            <ul>
+              <li>Normal distribution and standard normal</li>
+              <li>Critical values, p-value, confidence intervals and their use</li>  
+            </ul>
+            <li>Importance of representativeness</li>
+          </ul>
+          <li>Importance of correct sampling i.e. how to collect to ensure representativeness and randomness</li>
+          <li>Importance of having enough data in a sample</li>
+          <li>Different types of statistical measures</li>
+          <li>Concept of missing data and its importance</li>
+          <ul>
+            <li>Different types</li>
+            <li>Issues when assessing missing data in a dataset</li>
+            <li>Possible decisions and their impact on analysis</li>  
+          </ul>
+         <li>Aim of the Hyposthesis</li> 
+            <ul>
+              <li>Concepts of hypothesis testing</li>
+              <li>Difference between the null hypothesis and the alternate hypothesis</li>
+            </ul>
+          <li>Apply the understanding to the dataset for your variables of interest</li>
+          <ul>
+            <li>Size of the dataset</li>
+            <li>Representativeness of the dataset</li>
+            <li>Concepts of interest from the dataset</li>
+            <li>Variables of interest, their possible values, Number of records</li>
+            <ul>
+              <li>Example of each statistical measure type from the dataset</li>
+              <li>Issues resulting and the implications of these</li>  
+            </ul>
+            <li>Assessing for missing data</li>
+            <li>Hypotheses for the variables of interest</li>
+          </ul>
+        </ul>
+      </div>
+    </div>
+      <div class="container">
+        <h1>Population Vs Sample</h1>
+        <h3>Popluation</h3>
+        <p>The collections of all items of interest to our study obtained through various
+           measurements; denoted N. <br>
+           Almost <strong>impossible</strong> to perform analysis on large populations. <br>
+           <strong>Parameter:</strong> A numerical value describing an aspect of an entire population
+        </p>
+        <h3>Sample</h3>
+        <p>A subset of the population of interest; denoted n. <br>
+          <strong>Statistics:</strong> A numerical value describing an aspect of a Sample <br>
+           Parameters can be obtained by doing statistics on their samples, if more samples of a 
+           population is available then the parameter values will be more accurate.  <br>
+        </p>
+        <h3>Random Sample</h3>
+        <p>A sample where each member is chosen from the population strictly by chance, which is 
+          the ideal sample from a population and can give a more accurate results for the population
+          if the random sample can charatcterise all the variables of the population.
+        </p>
+        <div class="container">
+          <h4>Parameter vs statistics</h4>
+          <p>The .table-striped class adds zebra-stripes to a table:</p>            
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th>Parameter</th>
+                <th>Statistics</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Parameters are numbers that summarize data for an entire population.</td>
+                <td>Statistics are numbers that summarize data from a sample, i.e. some subset of the entire population.</td>    
+              </tr>  
+            </tbody>
+          </table>
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th>Examples</th>
+                <th>Parameter/Statistics</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>e.g A researcher wants to estimate the average height of women aged 20 years or older. From 
+                  a simple random sample of 45 women, the researcher obtains a sample mean height of 63.9 inches.</td>
+                <td>
+                <strong> Parameter:</strong> The parameter is the average height of all women aged 20 years or older.
+                  <br><br>
+                <strong> Statistic:</strong>  The statistic is the average height of 63.9 inches from the sample of 45 women.
+              </td>
+                 </tr>
+                 <tr>
+                  <td>e.g A school administrator wants to estimate the mean score on the verbal portion of the SAT for students whose first language is not English. From a simple random sample of 
+                    20 students whose first language is not English, the administrator obtains a sample mean SAT verbal score of 458.
+                    </td>
+                    <td>
+                  <strong> Parameter:</strong> The parameter is the mean verbal SAT score for students whose first language is not English.
+                    <br><br>
+                  <strong> Statistic:</strong>  The statistic is the mean SAT verbal score of 458 from the sample of 20 students.
+                </tr>
+              </tbody>
+          </table>
+
+          <h3>Infering a population from a sample:</h3>
+          <p>
+            We use statistics to infer the population parameters.
+
+            Each samples would provide a different mean called sampling variation using which we  
+            form a distribution called <strong>Sampling distribution</strong>
+            
+            This means if our distribution follows the normal distribution we can find the standard deviation
+            of the sampling distribution(sample means) which is the Standard error of the mean
+            <strong>(SE).</strong>
+
+            <ul>
+
+              <li><strong>Normal Distributions:</strong></li>
+              Bell-shaped curve, with the values spread equally across the mean of the variable.
+              <br>If the bell curve is sharp, it implies that the spread/deviation is less and the
+              population mean is more closer to the sampling mean.
+              <br><strong>Standard Normal:</strong> If the mean of the normal distribution is 0 and
+              the standard deviation is 1 then it is said to be <strong>Standard Normal.</strong>
+              <li><strong>Skewed:</strong>
+              When the data points cluster more toward one side of the scale than the other, 
+              creating a curve that is not symmetrical. It could be both positively skewed or negatively
+              skewed.
+            <ul>
+              <li><strong>Positively skewed:</strong>When the data points cluster towards the left
+              leading a tail on the right.It means that the outliers are to the right (long tail to 
+              the right).</li>
+              <li><strong>Negatively skewed:</strong>When the data points cluster towards the right
+              leading a tail on the left. It means that the outliers are to the left.</li>
+              <li><strong>Kurtosis:</strong>It shows the heaviness of the tail,which can be divided
+              as <strong>Leptokurtic = heavy tails (more scores in the tails),
+              Platykurtic = light tails (more scores in the middle).
+              </strong></li>
+                
+            </ul>
+            </ul>
+            
+          </p> 
+          <strong>Central Limit Theorem:</strong>
+          <p>The distribution of sample statistics is nearly normal,centered at the population mean,
+            and with a standard deviation equal to the population standard deviation divided by square
+            root of the sample size.
+          </p>
+          <strong>Conditions for CLT:</strong>
+          <p>
+            <ul>
+              <li><strong>Independence:</strong>Sampled observations must be independent; random sample</li>
+              <li><strong>Sample size/skew:</strong>Either the population distribution is normal,or if the
+                population distribution is skewed,the sample size is large (rule of thumb:n >
+                30).</li>
+            </ul>
+          </p>
+          <strong>Confidence Interval</strong>
+          <p>
+            A plausible range of values for the population parameter is called a confidence interval.
+            <strong>Note:</strong> <br>
+            If we report a <strong>point estimate</strong>,we probably won’t hit the exact population parameter.
+            <br>
+            If we report a range of plausible values we have a good shot at capturing the parameter.
+          </p>
+          
+          <strong>Z-score:</strong>
+          <p>
+            Standardized score to compare the probability of getting values in our measurement scale
+            to standard normal.
+            <br>
+            For each raw scores, calculate how far it is from the mean in the units of S.D.
+            <br> Distribution of Z-score is standard normal(i.e.) <strong>Mean =0, SD = 1</strong> 
+          </p>
+
+          <strong>Uses of Z-score:</strong>
+          <ul>
+            <li>Comparing Scores on different raw score scales.</li>
+            <li>Showing how a given score stands in relation to overall set of scores.</li>
+            <li>Using probability tables to calculate the likelihood of particular scores.</li>
+          </ul>
+
+          <strong>Properties of Z-scores:</strong>
+          <ul>
+            <li>95% of z-scores lie between -1.96 to +1.96</li>
+            <li>99% of z-scores lie between -2.58 to +2.58</li>
+            <li>99.9% of z-scores lie between -3.29 to +3.29</li>
+          </ul>
+
+          <strong>Critical Values:</strong>
+          <p>
+            "Critical" values of z are associated with interesting central areas under the standard normal curve.
+            The area under the curve between the critical points implies the probability that any normal 
+            variable will have z-score between the said points.
+
+            The critical value of z is term linked to the area under the standard normal model. Critical values
+            can tell you what probability any particular variable will have.
+            
+            Critical z values are often denoted by zα, where the subscript α (alpha) is the tail area.
+
+          </p>
+
+          <strong>Representative Sample:</strong>
+          <p>
+            A representative sample is a subset of a population that seeks to accurately reflect the characteristics
+            of the larger group. 
+            <br>
+            A representative sample is a small subset group that seeks to proportionally reflect
+            specified characteristics exemplified in a target population.
+            <br>
+            Representative samples often yield the best results but they can be the most difficult
+            type of sample to obtain.
+            <br>
+            When a sample is not representative, it can be known as a random sample. While random sampling
+            is a simplified sampling approach, it comes with a higher risk of sampling error which can
+            potentially lead to incorrect results or strategies that can be costly. Random sampling can
+            choose its components completely at random, such as choosing names randomly from a list.
+          </p>
+
+          <h3>Key issues with Samples</h3>
+          <ul>
+            <li><strong>Biased Sampling:</strong> One of the most important issue with Sampling
+            is Biased Sampling, which produces data that systematically differs from the population
+            from which it is taken. This could degrade the integrity of the population parameter</li>
+            <li><strong>Sample size:</strong>Which means the size of the sample subset from the population,
+              <br>
+              If the size is small, it might create problems when extrapolating conclusions for the population
+              <br>
+              If the size is large, it may lead to waste of resource, since a smaller sample could get the
+            necessary conclusions</li>
+            <li><strong>Randomness:</strong>Each variable/feature in the data should be as random
+            as possible, with/without the researcher's knowledge it is possible to introduce bias in 
+            the sample
+            </li>
+          </ul>
+          <img src="./images/pop.gif" alt="web.standard.edu">
+        </div>
+        <hr>
+        <h3>Experiments and Variable</h3>
+        <p><strong>Experiments:</strong>The process using which we collect relevant measurements
+        for statistics</p>
+        <p><strong>Variable/Features:</strong>An attribute that describes a person, place, 
+          thing, situation, or idea. 
+          <br>
+          The variables in the study/experiment should be reliable and valid.
+          <br>
+          <strong>Confounding Variables:</strong> Sometimes, it is pssible that the sample contains
+          values which are influenced by other measurements which we included in the sample.
+          These are called confounding variables.
+        </p>
+
+        <h3>Types of Data</h3>
+        <img src="./images/Screenshot 2020-11-25 at 3.47.01 PM.png" width="1080px" height="720px" alt="">
+        <h3>Levels of measurements</h3>
+        <img src="./images/Screenshot 2020-11-25 at 3.39.46 PM.png" width="1080px" height="720px" alt="">
+        <h3>Measure of Central Tendancy</h3>
+        <p>
+          <ul>
+            <li>Descriptive Statistics for numerical data</li>
+            <li>A single number which can represent the whole data and around which
+              the other data tend to cluster
+            </li>
+            <li>Measured using 3 methods: <strong>Mean,Median,Mode</strong></li>
+          </ul>
+          <ul>
+            <li>
+              <strong>Mean:</strong> It is the arithmetic average of the values in a feature in sample.
+            </li>
+            <p>
+                
+              <ul><strong>Advantages:</strong>
+                <li>Takes into account every number in the data set.
+                   That means all numbers are included in calculating the mean.</li>
+                  <li>
+                    Easy and quick way to represent the entire data values by a 
+                    single or unique number due to its straightforward method of calculation.
+                  </li>
+                  <li>
+                    Each set has a unique mean value.
+                  </li>
+              </ul>
+              <ul><strong>Disadvantages:</strong>
+              <li>Its value is easily affected by extreme values known as the outliers.</li>
+              </ul>
+            </p>
+            
+            <li>
+              <strong>Median:</strong> It is the middle value from all the values in a feature in the sample
+              given that the value of the feature are arranged in some kind of order (ascending/descending).
+              If the number of values are even, the median is the average of the middle two values.
+             
+              <p>
+                
+                <ul><strong>Advantages:</strong>
+                  <li>Not affected by the outliers in the data set. An outlier is a data point
+                     that is radically “distant” or “away” from common trends of values in a given set. 
+                     It does not represent a typical number in the set.</li>
+                    <li>
+                      The concept of the median is intuitive thus can easily be explained as
+                       the center value.
+                    </li>
+                    <li>
+                      Each set has a unique median value.
+                    </li>
+                </ul>
+                <ul><strong>Disadvantages:</strong>
+                <li>Its value is perceived as it is. It cannot be utilized for further algebraic treatment.</li>
+                </ul>
+                <br>
+                It is more susceptible to outliers than mean of measuring central tendancy.
+  
+              </p>
+            </li>
+            <li>
+              <strong>Mode:</strong> It is the most frequently occured measure from the feature in the sample.
+              <br> 
+              It is more insensitive to large changes to the sample
+              <strong>Note:</strong> If a distribution has two modes then it is known as bimodal.
+              <p>
+                
+                <ul><strong>Advantages:</strong>
+                  <li>Just like the median, the mode is not affected by outliers.</li>
+                    <li>
+                      Useful to find the most “popular” or common item. This includes data sets that do not involve numbers.
+                    </li>
+                </ul>
+                <ul><strong>Disadvantages:</strong>
+                <li>If the feature contains no repeating values or more repeating value ,this is meaningless </li>
+                </ul>
+              </p>
+              <br>
+              It is more used in case of Qualitative numerical values like nominal/Ordinal.
+            </li>
+          </ul>
+        </p>
+        <div>
+          <h3>Dispersion/Vairability</h3>
+          <p>Reported with the measurement of central tendancy</p>
+          <p>Variability measures the amount of scatter in the dataset</p>
+          <p>Gives more insight on the outliers.</p>
+          <ul>
+            <strong>Methods to measure Variability</strong>
+            <li> <strong>Range:</strong> The difference between the largest and smallest values
+            in the feature.</li>
+            <li><strong>Variance:</strong>This method uses the deviation of the values from 
+            the mean of the feature. <br>
+            Since the difference between mean and the value may give negative values, summing it 
+            can cancel it, so we square it and then add. And then find the average.
+            <br>
+            For the average, we divide the sum with the degrees of Freedom.
+            <strong>Note:</strong> For sample, through experiments it is found that the degree of 
+            freedom is <strong>N-1</strong>
+            <br>
+            For population, we divide the sum with the total number of values in the set(N).
+          </li>
+          <li> <strong>Standard deviation:</strong>
+          It is the square-root of the variance.This is the more common measure since it makes
+          it will be in the units of measurement rather than squared units of measurement –
+          so is more intuitive.
+          <br>
+          The larger the value the more spread out around the mean the data is, smaller means
+          less spread.
+       <strong> The Empirical Rule:The 68-95-99.7 Rule</strong> 
+       <ul>
+        In the normal distribution with mean µ and standard deviation σ:
+        <li>68% of the observations fall within σ of the mean µ.</li>
+        <li>95% of the observations fall within 2σ of the mean µ.</li>
+        <li>99.7% of the observations fall within 3σ of the mean µ.</li>
+       </ul> 
+          </li>
+          <li>
+            <strong>IQR:</strong>
+            Interquartile range (IQR) is the range of the middle half of the data.  
+          </li>
+          </ul>
+          <p>
+            <strong>Degrees of Freedom:</strong>
+            Degrees of freedom of an estimate is the number of independent pieces of information
+            that went into calculating the estimate. 
+          </p>
+          <p> <strong>Measure of Dispersion</strong></p>
+        </div>
+        <div>
+          <h3>Frequency Distributions:</h3>
+          <ul>
+            <li>Plotted using Histograms with a particular variable</li>
+            <li>Shows the relative Frequency of the values for variables of interest</li>
+            </ul>
+          </li>
+          </ul>
+          <div>
+            <h3>Hyposthesis Testing:</h3>
+            <p>
+              A statistical method that uses sample data to evaluate a hypothesis about
+              a population parameter. It is intended to help researchers  differentiate between 
+              real and random patterns in the data.
+            </p>
+
+
+            <strong> Types of Hyposthesis testing:</strong>
+            <ul>
+              <li><strong>Null Hyposthesis(H0):</strong>
+              <p>
+                It is a statemment regarding the values of unknown parameter, typically implies
+                no association between independent and dependent variables in out theory.
+                <br> All hypothesis testing starts with the null hypothesis.
+                <br> Usually check for equality.
+              </p>
+              </li>
+              <li><strong>Alternate Hypothesis(Ha):</strong>
+                <p>
+                  Contradicting Null hypothesis, seeking evidence against H0;
+                  <br> Usually checks for non-equality.
+                </p>
+              </li>
+              <li><strong>Test Statistic:</strong>
+              <p>
+                A quantity based on the sample data and null hypothesis which allows us to 
+                determine between null and alternate hypothesis
+              </p></li>
+            </ul>
+            <strong>example:</strong>
+            <p>
+              If we again think of a hypothesis test as a criminal trial then it makes sense to
+               frame the verdict in terms of the null and alternative hypotheses:
+              <strong>
+                <br> H0 :Defendant is innocent
+                <br> HA :Defendant is guilty 
+              </strong>
+               </p>
+            <p>
+              <strong>Steps Invovled in Hypothesis testing</strong>
+              <ul>
+                <li>Compute Test Statistic (or compute P value)</li>
+                <li>Search for Critical Value</li>
+                <li>Make Statistical Decision rule</li>
+                <li>Express Decision</li>
+              </ul>
+
+              <strong>Note: </strong>
+              <li>Probability of Obtaining a Test Statistic More Extreme <=or >=) than Actual 
+                Sample Value. Given H0 Is True</li>
+              <li>Called Observed Level of Significance</li>
+              <li>Used to Make Rejection Decision</li>
+              <p>
+                – If p value >= alpha, Do Not Reject H0 <br>
+                – If p value < alpha, Reject H0
+              </p>
+                    
+            </p>
+
+          </div>
+
+          <div>
+            <h3>Understanding the dataset: Student Performance Dataset</h3>
+            <strong>Overview:</strong>
+            <p>
+              This dataset is about student achievement in secondary education of two Portuguese schools.
+              <br>
+              The features include student grades, demographic, social and school-related features) 
+              and it was collected by using school reports and questionnaires.
+            </p>
+            <ul>
+              <li>
+                <strong>Size of the dataset: 382 records</strong>
+              </li>
+              <li><strong>Representativeness of the dataset:</strong>
+              <p>The dataset uses the data of students achievement in secondary educattion
+                  but focusing on only two schools. Though it is not completely random rather focuses
+                on the characteristics of the students involved in the dataset. </p>
+                <p>So this sample, cannot extend to provide the population parameter.</p>
+            </li>
+
+            <li><strong>Concepts of Interest:</strong>
+            <strong>
+              <ul>
+                <li>Sample</li>
+                <li>Statiscal Measures</li>
+                <li>Missing Values</li>
+                <li>Normal Distribution</li>
+                <li>Confidence Interval</li>
+                <li>Z-score</li>
+                <li>Data types</li>
+                <li>Correlation.</li>
+                <li>Hyposthesis testing</li>
+              </ul>
+            </strong>
+             
+            </li>
+
+            <li><strong>Variables of Interest:</strong>
+            <p>The dataset contains details about the various factors that could possibly affect a
+              students performance. Some of the variables that I'm interested in are:
+              <ul>
+                <li><strong>Medu & Fedu:</strong>Which could possibly have effect on the the ward's
+                performance.(Nominal:levels: 1,2,3,4)</li>
+                <li><strong>Pstatus:</strong>Which may or may not have effect on the performance.
+                  (binary: 'T' - living together or 'A' - apart)</li>
+                <!-- <li><strong>reason:</strong>The reason for choosing the school may have impact on their
+                involvement and therby their performance.(nominal: close to 'home', school 'reputation', 'course' preference or 'other')</li> -->
+                <li><strong>studytime:</strong>How much effort the student puts in.(Nominal: 1 - < 2 hours, 2 - 2 to 5 hours, 3 - 5 to 10 hours, or 4 - >10 hours)</li>
+                <li><strong>schoolsup:</strong>Support from school may or may not have some effect
+                  (binary: yes or no)</li>
+                <!-- <li><strong>activities:</strong>Let's analyse does extra-curricular activities affect
+                   performance (binary: yes or no)</li> -->
+                <li><strong>higher:</strong>Student's interest for higher studies (binary: yes or no)</li>
+                <li><strong>internet:</strong>Does the student have internet connection? (binary: yes or no)</li>
+                <!-- <li><strong>romantic:</strong>Is there any romantic relationship (binary: yes or no)</li> -->
+                <!-- <li><strong>famrel:</strong>The relationship with the family (numeric: from 1 - very bad to 5 - excellent)</li> -->
+                <li><strong>health:</strong>Health of the student. (numeric: from 1 - very bad to 5 - excellent)</li>
+                <li><strong>Absences:</strong>Number of Absences from the school(numeric: 0 to 93)</li>
+                <li><strong>mg1,mg2</strong>Maths first,second period grade.(interval: 0to 20)</li>
+                <li><strong>pg1,pg2</strong>Portugese first,second period grade.(interval: 0to 20)</li>
+              </ul>
+            </p>
+            </li>
+            </ul>
+            <h3>Hypothesis:</h3>
+            <ul>
+              <li><strong>Question:1</strong> Is there a Relationship among Medu,Fedu and grades(pg,mg)? </li>
+              <li><strong>Question:2</strong> Is there a Relationship between studytime and grades(pg,mg)?</li>
+              <li><strong>Question:3</strong> Does a student perform well when trying for higher education?</li>
+              <li><strong>Question:4</strong> Is there a relation betweem age and grades?</li>
+            </ul>
+            <h3>Statistical measures on mg1,mg2</h3>
+            <ul>
+              <li><strong>Measure of Central tendency:</strong>Common measures of location, or central tendency, 
+                are the arithmetic mean, median, mode, and interquartile mean.</li>
+                <div class='row'>
+                  <div class="col-6 row">
+                    <img class='col-12' src="./images/summary.png" alt="">
+                    <img class='col-12' src="./images/summary_mg2.png" alt="">
+                  </div>
+                  <div class="col-6 row">
+                    <img class='col-6' src="./images/mg_2.png" alt="">
+                    <img class='col-6' src="./images/mg1.png" alt="">
+                  </div>
+                </div>
+               <p>
+                 From the above, we can infer that mG2 has some outliers <strong>with 0 values,</strong> 
+                 we have to further test what these 0 values imply and their significance.
+                 <br>
+                 If there is no significance we can remove those values and try to make the distribution 
+                 more normal.
+                 <br>
+                 Both the variables need some caculations to transform them as normal distribution.
+               </p>
+            </ul>
+          </div>
+
+
+
+
+          <!-- <div>
+            <h3>Covariance and correlation</h3>
+            <img src="./images/Screenshot 2020-11-25 at 7.30.37 PM.png" width="1080px" height="720px" alt="">
+          </div> -->
+        </div>
+      </body>
+</html>
