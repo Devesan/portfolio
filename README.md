@@ -1,3 +1,3 @@
 ---
-permalink: /prepare.html
+permalink: /index.html
 ---
