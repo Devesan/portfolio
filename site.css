@@ -1,3 +1,32 @@
 .container_height{
     height: 10em;
 }
+
+.code-part{
+    background-color: #F0F0F0;
+    /* font-size: 2rem; */
+    font-weight: 700;
+    /* height: 300px; */
+    
+}
+.r{
+    color:#E83F8B;
+    font-weight: 700;
+    font-size: 1rem;
+}
+.output{
+    /* position:absolute; */
+    /* right:6.5rem; */
+    /* height: 600px; */
+    /* border: 1px solid; */
+}
+.result{
+    /* height: 300px; */
+    border-bottom: 1px solid;
+}
+img{
+    height: 300px;
+}
+code{
+    color: black;
+}

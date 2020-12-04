@@ -270,141 +270,14 @@
         <img src="./images/Screenshot 2020-11-25 at 3.47.01 PM.png" width="1080px" height="720px" alt="">
         <h3>Levels of measurements</h3>
         <img src="./images/Screenshot 2020-11-25 at 3.39.46 PM.png" width="1080px" height="720px" alt="">
-        <h3>Measure of Central Tendancy</h3>
-        <p>
-          <ul>
-            <li>Descriptive Statistics for numerical data</li>
-            <li>A single number which can represent the whole data and around which
-              the other data tend to cluster
-            </li>
-            <li>Measured using 3 methods: <strong>Mean,Median,Mode</strong></li>
-          </ul>
-          <ul>
-            <li>
-              <strong>Mean:</strong> It is the arithmetic average of the values in a feature in sample.
-            </li>
-            <p>
-                
-              <ul><strong>Advantages:</strong>
-                <li>Takes into account every number in the data set.
-                   That means all numbers are included in calculating the mean.</li>
-                  <li>
-                    Easy and quick way to represent the entire data values by a 
-                    single or unique number due to its straightforward method of calculation.
-                  </li>
-                  <li>
-                    Each set has a unique mean value.
-                  </li>
-              </ul>
-              <ul><strong>Disadvantages:</strong>
-              <li>Its value is easily affected by extreme values known as the outliers.</li>
-              </ul>
-            </p>
-            
-            <li>
-              <strong>Median:</strong> It is the middle value from all the values in a feature in the sample
-              given that the value of the feature are arranged in some kind of order (ascending/descending).
-              If the number of values are even, the median is the average of the middle two values.
-             
-              <p>
-                
-                <ul><strong>Advantages:</strong>
-                  <li>Not affected by the outliers in the data set. An outlier is a data point
-                     that is radically “distant” or “away” from common trends of values in a given set. 
-                     It does not represent a typical number in the set.</li>
-                    <li>
-                      The concept of the median is intuitive thus can easily be explained as
-                       the center value.
-                    </li>
-                    <li>
-                      Each set has a unique median value.
-                    </li>
-                </ul>
-                <ul><strong>Disadvantages:</strong>
-                <li>Its value is perceived as it is. It cannot be utilized for further algebraic treatment.</li>
-                </ul>
-                <br>
-                It is more susceptible to outliers than mean of measuring central tendancy.
-  
-              </p>
-            </li>
-            <li>
-              <strong>Mode:</strong> It is the most frequently occured measure from the feature in the sample.
-              <br> 
-              It is more insensitive to large changes to the sample
-              <strong>Note:</strong> If a distribution has two modes then it is known as bimodal.
-              <p>
-                
-                <ul><strong>Advantages:</strong>
-                  <li>Just like the median, the mode is not affected by outliers.</li>
-                    <li>
-                      Useful to find the most “popular” or common item. This includes data sets that do not involve numbers.
-                    </li>
-                </ul>
-                <ul><strong>Disadvantages:</strong>
-                <li>If the feature contains no repeating values or more repeating value ,this is meaningless </li>
-                </ul>
-              </p>
-              <br>
-              It is more used in case of Qualitative numerical values like nominal/Ordinal.
-            </li>
-          </ul>
-        </p>
-        <div>
-          <h3>Dispersion/Vairability</h3>
-          <p>Reported with the measurement of central tendancy</p>
-          <p>Variability measures the amount of scatter in the dataset</p>
-          <p>Gives more insight on the outliers.</p>
-          <ul>
-            <strong>Methods to measure Variability</strong>
-            <li> <strong>Range:</strong> The difference between the largest and smallest values
-            in the feature.</li>
-            <li><strong>Variance:</strong>This method uses the deviation of the values from 
-            the mean of the feature. <br>
-            Since the difference between mean and the value may give negative values, summing it 
-            can cancel it, so we square it and then add. And then find the average.
-            <br>
-            For the average, we divide the sum with the degrees of Freedom.
-            <strong>Note:</strong> For sample, through experiments it is found that the degree of 
-            freedom is <strong>N-1</strong>
-            <br>
-            For population, we divide the sum with the total number of values in the set(N).
-          </li>
-          <li> <strong>Standard deviation:</strong>
-          It is the square-root of the variance.This is the more common measure since it makes
-          it will be in the units of measurement rather than squared units of measurement –
-          so is more intuitive.
-          <br>
-          The larger the value the more spread out around the mean the data is, smaller means
-          less spread.
-       <strong> The Empirical Rule:The 68-95-99.7 Rule</strong> 
-       <ul>
-        In the normal distribution with mean µ and standard deviation σ:
-        <li>68% of the observations fall within σ of the mean µ.</li>
-        <li>95% of the observations fall within 2σ of the mean µ.</li>
-        <li>99.7% of the observations fall within 3σ of the mean µ.</li>
-       </ul> 
-          </li>
-          <li>
-            <strong>IQR:</strong>
-            Interquartile range (IQR) is the range of the middle half of the data.  
-          </li>
-          </ul>
-          <p>
-            <strong>Degrees of Freedom:</strong>
-            Degrees of freedom of an estimate is the number of independent pieces of information
-            that went into calculating the estimate. 
-          </p>
-          <p> <strong>Measure of Dispersion</strong></p>
-        </div>
-        <div>
+        <!-- <h3>Measure of Central Tendancy</h3>
           <h3>Frequency Distributions:</h3>
           <ul>
             <li>Plotted using Histograms with a particular variable</li>
             <li>Shows the relative Frequency of the values for variables of interest</li>
             </ul>
           </li>
-          </ul>
+          </ul> -->
           <div>
             <h3>Hyposthesis Testing:</h3>
             <p>
@@ -512,59 +385,38 @@
                 <li><strong>Medu & Fedu:</strong>Which could possibly have effect on the the ward's
                 performance.(Nominal:levels: 1,2,3,4)</li>
                 <li><strong>Pstatus:</strong>Which may or may not have effect on the performance.
-                  (binary: 'T' - living together or 'A' - apart)</li>
+                  (Nominal: 'T' - living together or 'A' - apart)</li>
                 <!-- <li><strong>reason:</strong>The reason for choosing the school may have impact on their
                 involvement and therby their performance.(nominal: close to 'home', school 'reputation', 'course' preference or 'other')</li> -->
-                <li><strong>studytime:</strong>How much effort the student puts in.(Nominal: 1 - < 2 hours, 2 - 2 to 5 hours, 3 - 5 to 10 hours, or 4 - >10 hours)</li>
+                <li><strong>studytime:</strong>How much effort the student puts in.(Ordinal: 1 - < 2 hours, 2 - 2 to 5 hours, 3 - 5 to 10 hours, or 4 - >10 hours)</li>
                 <li><strong>schoolsup:</strong>Support from school may or may not have some effect
-                  (binary: yes or no)</li>
+                  (Nominal: yes or no)</li>
                 <!-- <li><strong>activities:</strong>Let's analyse does extra-curricular activities affect
                    performance (binary: yes or no)</li> -->
-                <li><strong>higher:</strong>Student's interest for higher studies (binary: yes or no)</li>
-                <li><strong>internet:</strong>Does the student have internet connection? (binary: yes or no)</li>
+                <li><strong>higher:</strong>Student's interest for higher studies (Nominal: yes or no)</li>
+                <li><strong>internet:</strong>Does the student have internet connection? (Nominal: yes or no)</li>
                 <!-- <li><strong>romantic:</strong>Is there any romantic relationship (binary: yes or no)</li> -->
                 <!-- <li><strong>famrel:</strong>The relationship with the family (numeric: from 1 - very bad to 5 - excellent)</li> -->
-                <li><strong>health:</strong>Health of the student. (numeric: from 1 - very bad to 5 - excellent)</li>
-                <li><strong>Absences:</strong>Number of Absences from the school(numeric: 0 to 93)</li>
-                <li><strong>mg1,mg2</strong>Maths first,second period grade.(interval: 0to 20)</li>
-                <li><strong>pg1,pg2</strong>Portugese first,second period grade.(interval: 0to 20)</li>
+                <li><strong>health:</strong>Health of the student. (Ordinal: from 1 - very bad to 5 - excellent)</li>
+                <li><strong>Absences:</strong>Number of Absences from the school(continous(interval): 0 to 93)</li>
+                <li><strong>mg1,mg2</strong>Maths first,second period grade.(continous(interval): 0to 20)</li>
+                <li><strong>pg1,pg2</strong>Portugese first,second period grade.(continous(interval): 0to 20)</li>
               </ul>
             </p>
             </li>
             </ul>
-            <h3>Hypothesis:</h3>
+            <h3>Research Questions:</h3>
             <ul>
-              <li><strong>Question:1</strong> Is there a Relationship among Medu,Fedu and grades(pg,mg)? </li>
-              <li><strong>Question:2</strong> Is there a Relationship between studytime and grades(pg,mg)?</li>
-              <li><strong>Question:3</strong> Does a student perform well when trying for higher education?</li>
-              <li><strong>Question:4</strong> Is there a relation betweem age and grades?</li>
-            </ul>
-            <h3>Statistical measures on mg1,mg2</h3>
-            <ul>
-              <li><strong>Measure of Central tendency:</strong>Common measures of location, or central tendency, 
-                are the arithmetic mean, median, mode, and interquartile mean.</li>
-                <div class='row'>
-                  <div class="col-6 row">
-                    <img class='col-12' src="./images/summary.png" alt="">
-                    <img class='col-12' src="./images/summary_mg2.png" alt="">
-                  </div>
-                  <div class="col-6 row">
-                    <img class='col-6' src="./images/mg_2.png" alt="">
-                    <img class='col-6' src="./images/mg1.png" alt="">
-                  </div>
-                </div>
-               <p>
-                 From the above, we can infer that mG2 has some outliers <strong>with 0 values,</strong> 
-                 we have to further test what these 0 values imply and their significance.
-                 <br>
-                 If there is no significance we can remove those values and try to make the distribution 
-                 more normal.
-                 <br>
-                 Both the variables need some caculations to transform them as normal distribution.
-               </p>
-            </ul>
-          </div>
+              <li><strong>Question:1</strong> Is there a Relationship between G2 and G3? </li>
 
+              <li><strong>Question:2</strong> Is there a Relationship between G3 and students trying for higher education?</li>
+              <li><strong>Question:3</strong> Is there a Relationship between G3 and their study-time?</li>
+              <li><strong>Question:4</strong> Is there a relation betweem age and G3?</li>
+            </ul>
+       
+            <p><a class="btn btn-primary btn-lg" href="./explore.html" role="button">Let's Explore &raquo;</a></p>
+
+            
 
 
 
@@ -573,5 +425,14 @@
             <img src="./images/Screenshot 2020-11-25 at 7.30.37 PM.png" width="1080px" height="720px" alt="">
           </div> -->
         </div>
+
+        <div class = 'container row'>
+          <div class= 'code-part col-9'>Code:</div>
+          <div class="output col-3">Output:
+            <img src="" alt="">
+          </div>
+          <div class="result col-9">Result:</div>
+        </div>
+
       </body>
 </html>

@@ -1,0 +1,1124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="site.css" >
+    <title>Explore</title>
+</head>
+<body>
+    <div class = 'container'>
+        <h3>Descriptive Statistics</h3>
+        <ul>
+            <strong>Summary Statistics</strong>
+            <li>Measures of Central Tendency:
+                <p>
+                    <ul>
+                      <li>Descriptive Statistics for numerical data</li>
+                      <li>A single number which can represent the whole data and around which
+                        the other data tend to cluster
+                      </li>
+                      <li>Measured using 3 methods: <strong>Mean,Median,Mode</strong></li>
+                    </ul>
+                    <ul>
+                      <li>
+                        <strong>Mean:</strong> It is the arithmetic average of the values in a feature in sample.
+                      </li>
+                      <p>
+                          
+                        <ul><strong>Advantages:</strong>
+                          <li>Takes into account every number in the data set.
+                             That means all numbers are included in calculating the mean.</li>
+                            <li>
+                              Easy and quick way to represent the entire data values by a 
+                              single or unique number due to its straightforward method of calculation.
+                            </li>
+                            <li>
+                              Each set has a unique mean value.
+                            </li>
+                        </ul>
+                        <ul><strong>Disadvantages:</strong>
+                        <li>Its value is easily affected by extreme values known as the outliers.</li>
+                        </ul>
+                      </p>
+                      
+                      <li>
+                        <strong>Median:</strong> It is the middle value from all the values in a feature in the sample
+                        given that the value of the feature are arranged in some kind of order (ascending/descending).
+                        If the number of values are even, the median is the average of the middle two values.
+                       
+                        <p>
+                          
+                          <ul><strong>Advantages:</strong>
+                            <li>Not affected by the outliers in the data set. An outlier is a data point
+                               that is radically “distant” or “away” from common trends of values in a given set. 
+                               It does not represent a typical number in the set.</li>
+                              <li>
+                                The concept of the median is intuitive thus can easily be explained as
+                                 the center value.
+                              </li>
+                              <li>
+                                Each set has a unique median value.
+                              </li>
+                          </ul>
+                          <ul><strong>Disadvantages:</strong>
+                          <li>Its value is perceived as it is. It cannot be utilized for further algebraic treatment.</li>
+                          </ul>
+                          <br>
+                          It is more susceptible to outliers than mean of measuring central tendancy.
+            
+                        </p>
+                      </li>
+                      <li>
+                        <strong>Mode:</strong> It is the most frequently occured measure from the feature in the sample.
+                        <br> 
+                        It is more insensitive to large changes to the sample
+                        <strong>Note:</strong> If a distribution has two modes then it is known as bimodal.
+                        <p>
+                          
+                          <ul><strong>Advantages:</strong>
+                            <li>Just like the median, the mode is not affected by outliers.</li>
+                              <li>
+                                Useful to find the most “popular” or common item. This includes data sets that do not involve numbers.
+                              </li>
+                          </ul>
+                          <ul><strong>Disadvantages:</strong>
+                          <li>If the feature contains no repeating values or more repeating value ,this is meaningless </li>
+                          </ul>
+                        </p>
+                        <br>
+                        It is more used in case of Qualitative numerical values like nominal/Ordinal.
+                      </li>
+                    </ul>
+                  </p>
+            </li>
+            <li>Measures of Dispersion:
+                <p>
+                    <h3>Dispersion/Vairability</h3>
+                    <p>Reported with the measurement of central tendancy</p>
+                    <p>Variability measures the amount of scatter in the dataset</p>
+                    <p>Gives more insight on the outliers.</p>
+                    <ul>
+                      <strong>Methods to measure Variability</strong>
+                      <li> <strong>Range:</strong> The difference between the largest and smallest values
+                      in the feature.</li>
+                      <li><strong>Variance:</strong>This method uses the deviation of the values from 
+                      the mean of the feature. <br>
+                      Since the difference between mean and the value may give negative values, summing it 
+                      can cancel it, so we square it and then add. And then find the average.
+                      <br>
+                      For the average, we divide the sum with the degrees of Freedom.
+                      <strong>Note:</strong> For sample, through experiments it is found that the degree of 
+                      freedom is <strong>N-1</strong>
+                      <br>
+                      For population, we divide the sum with the total number of values in the set(N).
+                    </li>
+                    <li> <strong>Standard deviation:</strong>
+                    It is the square-root of the variance.This is the more common measure since it makes
+                    it will be in the units of measurement rather than squared units of measurement –
+                    so is more intuitive.
+                    <br>
+                    The larger the value the more spread out around the mean the data is, smaller means
+                    less spread.
+                 <strong> The Empirical Rule:The 68-95-99.7 Rule</strong> 
+                 <ul>
+                  In the normal distribution with mean µ and standard deviation σ:
+                  <li>68% of the observations fall within σ of the mean µ.</li>
+                  <li>95% of the observations fall within 2σ of the mean µ.</li>
+                  <li>99.7% of the observations fall within 3σ of the mean µ.</li>
+                 </ul> 
+                    </li>
+                    <li>
+                      <strong>IQR:</strong>
+                      Interquartile range (IQR) is the range of the middle half of the data.  
+                    </li>
+                    </ul>
+                    <p>
+                      <strong>Degrees of Freedom:</strong>
+                      Degrees of freedom of an estimate is the number of independent pieces of information
+                      that went into calculating the estimate. 
+                    </p>
+                </p>
+            </li>
+            <li>Measures of shape:
+                <p>
+                    The shape of a distribution is measured using its skewness.
+                    <ul>
+                        <li><strong>Skewed:</strong>
+                            When the data points cluster more toward one side of the scale than the other, 
+                            creating a curve that is not symmetrical. It could be both positively skewed or negatively
+                            skewed.
+                          <ul>
+                            <li><strong>Positively skewed:</strong>When the data points cluster towards the left
+                            leading a tail on the right.It means that the outliers are to the right (long tail to 
+                            the right).</li>
+                            <li><strong>Negatively skewed:</strong>When the data points cluster towards the right
+                            leading a tail on the left. It means that the outliers are to the left.</li>
+                            <li><strong>Kurtosis:</strong>It shows the heaviness of the tail,which can be divided
+                            as <strong>Leptokurtic = heavy tails (more scores in the tails),
+                            Platykurtic = light tails (more scores in the middle).
+                            </strong></li>
+                    </ul>
+                </p>
+            </li>Measure of dependance:
+            <p>
+                The dependance between two variables are measured using correlation.
+            </p>
+            </li>
+        </ul>
+
+        <div>
+            <h3>Exploring & Analysing the dataset</h3>
+            <ul>
+                <li>Basic summary of Variables of Interest:
+                    <div class = 'container row'>
+                        <div class= 'code-part col-12'>Code:
+                            <code>
+                                <p>
+                                    >var_of_interest <- c('Pstatus','schoolsup.m','internet','higher.m','age','mG1','mG2','mG3','sex')
+                                    >summary(s_perform[var_of_interest])
+                                </p>
+                            </code>
+                            
+                           
+                        </div>
+                        <div class="result col-12"><strong>Result:</strong> 
+                            <code>
+                                <pre>
+Pstatus          schoolsup.m          internet           higher.m              age             mG1       
+Length:382         Length:382         Length:382         Length:382         Min.   :15.00   Min.   : 3.00  
+Class :character   Class :character   Class :character   Class :character   1st Qu.:16.00   1st Qu.: 8.00  
+Mode  :character   Mode  :character   Mode  :character   Mode  :character   Median :17.00   Median :10.50  
+                                                                            Mean   :16.59   Mean   :10.86  
+                                                                            3rd Qu.:17.00   3rd Qu.:13.00  
+                                                                            Max.   :22.00   Max.   :19.00  
+        mG2             mG3       
+Min.   : 0.00   Min.   : 0.00  
+1st Qu.: 8.25   1st Qu.: 8.00  
+Median :11.00   Median :11.00  
+Mean   :10.71   Mean   :10.39  
+3rd Qu.:13.00   3rd Qu.:14.00  
+Max.   :19.00   Max.   :20.00  
+                            </pre>
+                            </code>
+                            
+                        </div>
+                      </div>
+                </li>
+                <li>Assesing Normality:
+                    <p>
+                        <ol>
+                            <li>Generating Plots:
+                                <ul>
+                                    <li> A visual inspection based on the histogram and
+                                        normal distribution curve</li> 
+                                    <li><strong>Q-Q plot:</strong>A scatterplot created by plotting two sets of quantiles against one another. 
+                                        If both sets of quantiles came from the same distribution, we should see the points forming a line that’s roughly straight. 
+                                        </li>  
+                                </ul>
+                                     
+                            </li>
+                            <li>Generating Summary Statistics:
+                                <ul>
+                                    <li>A numerical inspection with the measures of skewness and kurtosis
+                                        with standardised score.
+                                        </li>
+                                </ul>
+                              
+                            </li>
+                            <li>Conducting Tests for Normality:
+                                <ul>
+                                    <li>
+                                    Shapiro-Wilks (sample size 50 up to 2000)
+                                    </li>
+                                   <li>
+                                    Kolmogrov-Smirnoff (larger samples >50)
+                                   </li>
+                                   <strong>Note:</strong>
+                                    For sample sizes larger than 100-200 both tests tend to be too sensitive 
+                                    (will always tell you that you data is not normal) and should be interpreted
+                                     alongside histograms with fitted normal curves, QQ-plots and skewness and 
+                                     kurtosis values.    
+                                </ul>
+                            </li>
+                        </ol>
+                        <h3>Assesing Normality for the continous variables mG2,mG3:</h3>
+                        <ul>
+                            <li><strong>Visual inspection:</strong>
+                                <div class = 'container row'>
+                                    <div class= 'code-part col-9'>Code:
+                                        <code>
+                                            <pre class='r'>
+#Histogram of mG2
+gg <- ggplot(s_perform, aes(x=s_perform$mG2))
+
+#Change the label of the x axis
+gg <- gg + labs(x="maths grade 2")
+
+#manage binwidth and colours
+gg <- gg + geom_histogram(binwidth=2, colour="black", aes(y=..density..,
+        fill=..count..))
+gg <- gg + scale_fill_gradient("Count", low="#DCDCDC", high="#7C7C7C")
+
+#adding a normal curve
+#use stat_function to compute a normalised score for each value of mG2
+#pass the mean and standard deviation
+#use the na.rm parameter to say how missing values are handled
+gg <- gg + stat_function(fun=dnorm, color="red",args=list(mean=mean(
+        s_perform$mG2, na.rm=TRUE), sd=sd(s_perform$mG2, na.rm=TRUE)))
+
+#to display the graph request the contents of the variable be shown
+gg
+
+
+qqnorm(s_perform$mG2)
+qqline(s_perform$mG2, col=2)
+                                            </pre>
+                                        </code>
+                                    </div>
+                                    <div class="output col-3">Output:
+                                      <img src="./images/mG2_1.png" alt="">
+                                      <img src="./images/mG2_2.png" alt="">
+        
+                                    </div>
+                                    <div class="result col-12">Result:
+                                        <p>
+                                            <code>
+                                                From the density curve and the q-q plot we can assume through 
+                                            visual inspection that the vairable maybe normal. 
+                                            </code>
+                                            
+                                        </p>
+                                    </div>
+                                  </div>
+                                  <h4>For mg3</h4>
+                                  <div class = 'container row'>
+                                    <div class= 'code-part col-9'>Code:
+                                        <code>
+                                            <pre class='r'>
+#mG3
+
+gg <- ggplot(s_perform, aes(x=s_perform$mG3))
+gg <- gg + labs(x="maths grade 3")
+gg <- gg + geom_histogram(binwidth=2, colour="black", aes(y=..density..,
+        fill=..count..))
+gg <- gg + scale_fill_gradient("Count", low="#DCDCDC", high="#7C7C7C")
+gg <- gg + stat_function(fun=dnorm, color="red",args=list(mean=mean(
+        s_perform$mG3, na.rm=TRUE), sd=sd(s_perform$mG3, na.rm=TRUE)))
+gg
+
+#qq plot
+qqnorm(s_perform$mG3)
+qqline(s_perform$mG3, col=2)                 
+                                            </pre>
+                                        </code>
+                                    </div>
+                                    <div class="output col-3">Output:
+                                      <img src="./images/mg3.png" alt="">
+                                      <img src="./images/mg3_1.png" alt="">
+        
+                                    </div>
+                                    <div class="result col-12">Result:
+                                        <p>
+                                            <code>
+                                                From the density curve and the q-q plot we can assume through 
+                                            visual inspection that the vairable maybe normal. 
+                                            </code>
+                                            
+                                        </p>
+                                    </div>
+                                  </div>
+                            </li>
+                            <li><strong>Descriptive inspection:</strong>
+                                <div class = 'container row'>
+                                    <div class= 'code-part col-9'>Code:
+                                        <code>
+                                            <pre class='r'>
+pastecs::stat.desc(s_perform$mG2, basic=F)
+
+#We can make our decision based on the value of the standardised score for skew and kurtosis
+#We divide the skew statistic by the standard error to get the standardised score
+#This will indicate if we have a problem
+mG2skew<-semTools::skew(s_perform$mG2)
+mG2kurt<-semTools::kurtosis(s_perform$mG2)
+mG2skew[1]/mG2skew[2]
+
+mG2kurt[1]/mG2kurt[2]
+
+#and by calculating the percentage of standardised scores for the variable itself that are outside our acceptable range
+#This will tell us how big a problem we have
+# Calculate the percentage of standardised scores that are greated than 1.96
+# the perc function which is part of the FSA package which calculate the percentage that are within a range - you can look for greater than "gt", greater than or equal "geq", "gt", less than or equal "leq",  or less than "lt"),
+# scale is a function that creates z scores, abs gets absolute value
+
+zmG2<- abs(scale(s_perform$mG2))
+
+FSA::perc(as.numeric(zmG2), 1.96, "gt")
+FSA::perc(as.numeric(zmG2), 3.29, "gt") 
+                                                
+                                            </pre>
+                                        </code>
+                                    </div>
+                                    <div class="output col-3">Output:
+                                        <code>
+                                        <pre>
+median         mean      SE.mean CI.mean.0.95          var      std.dev     coef.var 
+11.0000000   10.7120419    0.1960908    0.3855557   14.6885160    3.8325600    0.3577805 
+                                        </pre>
+                                        <pre>
+> mG2skew[1]/mG2skew[2]
+skew (g1) 
+-3.193143 
+                                        </pre>
+                                        <pre>
+>mG2kurt[1]/mG2kurt[2]
+Excess Kur (g2) 
+2.023209 
+                                        </pre>
+                                        <pre>
+> FSA::perc(as.numeric(zmG2), 1.96, "gt")
+[1] 4.188482
+                                        </pre>
+                                        <pre>
+> FSA::perc(as.numeric(zmG2), 3.29, "gt")
+[1] 0
+                                        </pre>
+                                    </code>
+                                    </div>
+                                    <div class="result col-12">Result:
+                                        <p>
+                                            <code>
+                                                <ul>
+                                                    <li>
+                                                From the above summary statistics we can observe that skew is 
+                                                -3.2, which is (>2) and not acceptable, so we look further
+                                                into it by finding out the outliers that are contributing
+                                                the skew.
+                                                    </li>
+                                                    <li>
+                                                Since our dataset has more than 80 records, we use +/- 3.29 as our measure.
+                                                In that case we have 0% of values fall outside +/- 3.29. Therefore, it is 
+                                                okay to treat this as Normal.
+                                                    </li>
+                                                </ul>
+                                                
+
+                                            </code>
+                                            
+                                        </p>
+                                    </div>
+                                  </div>
+                                  <h4>For mg3</h4>
+                                  <div class = 'container row'>
+                                    <div class= 'code-part col-9'>Code:
+                                        <code>
+                                            <pre class='r'>
+#mG3
+
+pastecs::stat.desc(s_perform$mG3, basic=F)
+
+mG3skew<-semTools::skew(s_perform$mG3)
+mG3kurt<-semTools::kurtosis(s_perform$mG3)
+mG3skew[1]/mG3skew[2]
+
+mG3kurt[1]/mG3kurt[2]
+
+zmG3<- abs(scale(s_perform$mG3))
+
+FSA::perc(as.numeric(zmG3), 1.96, "gt")
+FSA::perc(as.numeric(zmG3), 3.29, "gt")
+             
+                                            </pre>
+                                        </code>
+                                    </div>
+                                    <div class="output col-3">Output:
+                                        <code>
+                                            <pre>
+> pastecs::stat.desc(s_perform$mG3, basic=F)
+median         mean      SE.mean CI.mean.0.95          var      std.dev     coef.var 
+11.0000000   10.3874346    0.2398202    0.4715368   21.9702354    4.6872418    0.4512415 
+                                            </pre>
+                                            <pre>
+>mG3skew[1]/mG3skew[2]
+skew (g1) 
+-5.63212 
+                                            </pre>
+                                            <pre>
+> mG3kurt[1]/mG3kurt[2]
+Excess Kur (g2) 
+1.108522 
+                                            </pre>
+                                            <pre>
+>FSA::perc(as.numeric(zmG3), 1.96, "gt")
+[1] 10.4712
+                                            </pre>
+                                            <pre>
+> FSA::perc(as.numeric(zmG3), 3.29, "gt")
+[1] 0
+                                            </pre>
+                                        </code>
+                                    </div>
+                                    <div class="result col-12">Result:
+                                        <p>
+                                            <code>
+                                                <ul>
+                                                    <li>
+                                                From the above summary statistics we can observe that skew is 
+                                                -5.63, which is (>2) and not acceptable, so we look further
+                                                into it by finding out the outliers that are contributing
+                                                the skew.
+                                                    </li>
+                                                    <li>
+                                                Since our dataset has more than 80 records, we use +/- 3.29 as our measure.
+                                                In that case we have 0% of values fall outside +/- 3.29. Therefore, it is 
+                                                okay to treat this as Normal.
+                                                    </li>
+                                            </code>
+                                            
+                                        </p>
+                                    </div>
+                                  </div>
+                            </li>
+                        </ul>
+                    </p>
+                    
+                    <strong>From the above analysis we can conclude that both our continous variable of
+                        interest mG2,mG3 are Normal.So, our tests will be parametric.
+                    </strong>
+
+                </li>
+            </ul>
+        </div>
+
+        <div>
+            <h3>Correlation:</h3>
+                <p>
+                    The most useful graph for displaying the relationship between two
+                    quantitative variables is a <strong>scatterplot</strong> .
+                    Two important components of scatterplot are:
+                    <ul>
+                        <li><strong>Direction:</strong>
+                        The direction of the correlation can be either positive or negative.
+                        <br>If positive, the two variables are directly related to each other.
+                        <br>If negative, the two variables are inversely related to each other.
+                        </li>
+                        <li><strong>Strength:</strong>
+                        The strength of the correlation can be either strong or weak or moderate.
+                        <br>The strongest linear relationship occurs when the slope is 1. This means that
+                        when one variable increases by one, the other variable also increases by the
+                        same amount. This line is at a 45 degree angle.
+                        <br> The weak linear relationship occurs when the slope is 0. This means that 
+                        when one variable increases the other remains same.
+                        </li>
+                    </ul>
+                    <p>
+                        The correlation r measures the strength of the linear relationship
+                        between two quantitative variables.
+                        <br> Calculating a Pearson correlation coefficient requires the assumption that the
+                        relationship between the two variables is linear.
+                        <br>
+                        <pre>
+Absolute Value of r Strength of Relationship
+r < 0.3 None or very weak
+0.3 < r <0.5 Weak
+0.5 < r < 0.7 Moderate
+r > 0.7 Strong
+                        </pre>
+                    </p>
+                </p>
+        </div>
+
+        <div>
+            <h3>Research Questions:</h3>
+            <ul>
+                <li><strong>Question:1</strong> Is there a Relationship between mG2 and mG3? 
+                    <p>
+                        <strong>Null Hypothesis:</strong> The population correlation coefficient between G2 and G3
+                         is equal to a hypothesized value (=0 indicating no linear correlation)
+                        <strong>Alternate Hypothesis:</strong> The population correlation coefficient between G2 and G3
+                        is not equal (or less than, or greater than) the hypothesized value(indicating linear correlation).
+                    </p>
+                    <p>
+                        <div class = 'container row'>
+                            <div class= 'code-part col-7'>Code:
+                                <code>
+                                    <pre class='r'>
+scatter <- ggplot(s_perform, aes(s_perform$mG2,
+ s_perform$mG3))
+
+#Add a regression line
+scatter + geom_point() + geom_smooth(method = "lm",
+ colour = "Red", se = F) + labs(x = "mG2", y = "mG3") 
+
+#Pearson Correlation
+stats::cor.test(s_perform$mG2, s_perform$mG3,
+ method='pearson')
+
+                                    </pre>
+                                </code>
+                            </div>
+                            <div class="output col-5">Output:
+                              <img src="./images/scatter.png" alt="">
+                              <pre>
+                                  <code>
+> stats::cor.test(s_perform$mG2, s_perform$mG3, method='pearson')
+
+Pearson's product-moment correlation
+
+data:  s_perform$mG2 and s_perform$mG3
+t = 40.977, df = 380, p-value < 2.2e-16
+alternative hypothesis: true correlation is
+not equal to 0
+95 percent confidence interval:
+0.8826652 0.9200050
+sample estimates:
+cor 
+0.9030267 
+                                  </code>
+                              </pre>
+                            </div>
+                            <div class="result col-12">Result:
+                                <p>
+                                    <code>
+                                       We can observe from the graph that there is a strong positive 
+                                       linear correlation, which implies we have satisfied our assumptions
+                                       for pearson test they are:
+                                       <ul>
+                                        <li>Correlation requires that both variables be quantitative.</li>
+                                        <li>Correlation describes linear relationships.</li>
+                                       </ul>
+                                       <br>From Pearson correlation,we get a correlation of 0.90, which means
+                                       the effect size is large(Acc. to cohen's effect size heuristic).
+                                       <br>Assuming our alpha level = 0.05,
+                                       our p-value(0.001) < 0.05 => The correlation is statistically signigficant.
+                                       <br>And so we have evidence to reject null hypothesis in favor of the alternate which is 
+                                       there is a relationship between <strong>mG2 and mG3</strong>
+
+                                    </code>
+                                    
+                                </p>
+                            </div>
+                          </div>
+                    </p>
+                
+                </li>
+                <li><strong>Question:2</strong> Is there significant difference in the mean of mG3 and students
+                     trying for higher education or not?
+                    <p><strong>T-test:</strong>
+                        The t test tells you how significant the differences between groups are;
+                        In other words it lets you know if those differences (measured in means) could have happened by chance.
+                    </p>
+                    <p>
+                        <strong>Assumptions of t-test:</strong>
+                        <ul>
+                            <li>Normality: Since it is a parametric test, it depends on the normality of the
+                                variable.
+                            </li>
+                            <li>Homogeneity of variance: Variances in these populations are roughly equal.
+                            </li>
+                        </ul>
+                    </p>
+                    <p>
+                        <strong>Hypothesis (Two-tailed):</strong>
+                        H0: There is no difference in mean mG3 score who try for higher studies and who do not try for higher studies
+                        HA: There is a difference in mean mG3 score who try for higher studies and who do not try for higher studies
+                       <strong>T-test</strong>
+                        Will tell us whether there is a statistically significant difference between the mean scores of the groups
+                        
+
+                        <div class = 'container row'>
+                            <div class= 'code-part col-8'>Code:
+                                <code>
+                                    <pre class='r'>
+#Get descriptive stastitics by group - output as a matrix
+psych::describeBy(s_perform$mG3, s_perform$higher.m, mat=TRUE)
+
+#Levene's test
+car::leveneTest(mG3 ~ higher.m, data=s_perform)
+#Pr(>F) is your probability - in this case it is not statistically 
+significant so we can assume homogeneity
+
+
+#Conduct the t-test from package stats
+#In this case we can use the var.equal = TRUE option to specify equal
+ variances and a pooled variance estimate
+stats::t.test(mG3 ~ higher.m,var.equal=TRUE,data=s_perform)
+#Statistically significant difference was found
+
+res <- stats::t.test(mG3 ~ higher.m,var.equal=TRUE,data=s_perform)
+#Calculate Cohen's d
+#artithmetically
+effcd=round((2*res$statistic)/sqrt(res$parameter),2)
+
+#Using function from effectsize package
+effectsize::t_to_d(t = res$statistic, res$parameter)
+
+
+#Eta squared calculation
+effes=round((res$statistic*res$statistic)/
+((res$statistic*res$statistic)+(res$parameter)),3)
+effes                                                                      
+                                    </pre>
+                                </code>
+                            </div>
+                            <div class="output col-4">Output:
+                                <code>
+                                <pre>
+    > psych::describeBy(s_perform$mG3, s_perform$higher.m, mat=TRUE)
+    item group1 vars   n     mean       sd median  trimmed    mad min max range       skew   kurtosis        se
+X11    1     no    1  18  5.50000 4.643148      8  5.43750 2.9652   0  12    12 -0.2580732 -1.8187883 1.0944005
+X12    2    yes    1 364 10.62912 4.561466     11 11.03767 4.4478   0  20    20 -0.7262715  0.4110525 0.2390858
+                                </pre>
+                                <pre>
+> car::leveneTest(mG3 ~ higher.m, data=s_perform)
+Levene's Test for Homogeneity of Variance (center = median)
+        Df F value Pr(>F)
+group   1   0.356 0.5511
+        380       
+                                </pre>
+                                <pre>
+> stats::t.test(mG3 ~ higher.m,var.equal=TRUE,data=s_perform)
+
+    Two Sample t-test
+
+data:  mG3 by higher.m
+t = -4.6531, df = 380, p-value = 4.523e-06
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+    -7.296493 -2.961749
+sample estimates:
+    mean in group no mean in group yes 
+            5.50000          10.62912 
+                                </pre>
+                                <pre>
+> effectsize::t_to_d(t = res$statistic, res$parameter)
+d |      1e+02% CI
+----------------------
+-0.48 | [-0.68, -0.27]
+                                </pre>
+                                <pre>
+> effes
+t 
+0.054 
+                                </pre>
+                            </code>
+                            </div>
+                            <div class="result col-12">Result:
+                                <p>
+                                    <code>
+                                        <ul>
+                                            <li>
+                                                From the descriptive statistics, we can see that the students
+                                                with yes and no for higher studies are 364 and 18 respectively.
+                                            </li>
+                                            <li><strong>Levene's Test: For homogeneity of variance</strong>
+                                                <p>
+                                                    <strong>F-statistic:</strong>
+
+                                                    <br><strong>Null Hypothesis: All variances are equal. </strong>
+                                                   <br> <strong>Alternate Hypothesis: All variances are not equal.</strong>
+                                                    <br> From the test, we can see Pr(>F) is 0.55,which is greater than 0.05,
+                                                    so it is not statistically significant, thus accepting null hypothesis(Homogenity).
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <strong>The p-value of the t-test(0.01) < 0.05, so we reject the null hypothesis
+                                                of equal means and accept the alternate hypothesis of different means. </strong>
+                                                <br>Statistically significant difference was found.
+                                            </li>
+                                            <li>
+                                                <strong>Effect Size:</strong>
+                                                <p>Effect size is a quantitative measure of the magnitude of the experimental effect.
+                                                     The larger the effect size the stronger the relationship between two variables</p>
+                                                <strong>Cohen's d:</strong>
+                                                <p>Cohen's d is an appropriate effect size for the comparison between two means.</p>
+                                                <p>Cohen suggested that d = 0.2 be considered a 'small' effect size, 0.5 represents a '
+                                                    medium' effect size and 0.8 a 'large' effect size. This means that if two groups' means
+                                                     don't differ by 0.2 standard deviations or more, the difference is trivial, even if it
+                                                      is statistically significant.</p>
+                                                <p>Cohens-d value = 0.48, which implies a medium effect size.</p>
+                                            </li>
+                                            <li>
+                                                <strong>Eta Squared</strong>
+                                                <p>
+                                                    Magnitude of the difference between the means of your groups
+                                                    Guidelines on effect size: 0.01 = small, 0.06 = moderate, 0.14 =large
+                                                    <br> eta value = 0.054, which implies a medium effect size.
+                                                </p>
+                                            </li>
+                                        </ul>
+                                        
+
+                                    </code>
+                                    
+                                </p>
+                            </div>
+                          </div>
+
+
+
+                    </p>
+                </li>
+                <li><strong>Question:3</strong> Is there a Relationship between G3 and their study-time?
+                <p>
+                    <strong>Group: 1 - < 2 hours, Group: 2 - 2 to 5 hours, Group: 3 - 5 to 10 hours, or Group: 4 - >10 hours</strong>
+                    <p>
+                        ANOVA is an Omnibus test
+                    <ul>
+                        <li>It test for an overall difference between groups.</li>
+                        <li>It tells us that the group means are different.</li>
+                        <li>It doesn’t tell us exactly which means differ-We need to conduct post-hoc
+                             tests (additional tests after the ANOVA) to find out where the differences lie 
+                        </li>
+                    </ul>
+                        <strong>Assumptions of ANOVA-test:</strong>
+                        <ul>
+                            <li>Normality: Since it is a parametric test, it depends on the normality of the
+                                variable.
+                            </li>
+                            <li>Homogeneity of variance: Variances in these populations are roughly equal.
+                            </li>
+                        </ul>
+                    </p>
+                    
+                    <strong>Null Hypothesis:</strong> The means of different groups of study-time are same.
+                    <br><strong>Alternate Hypothesis:</strong> The means of different groups of study-time are different
+
+                    <div class = 'container row'>
+                        <div class= 'code-part col-8'>Code:
+                            <code>
+                                <pre class='r'>
+#Get descriptive stastitics by group - output as a matrix
+psych::describeBy(s_perform$mG3, s_perform$studytime.m, mat=TRUE)
+
+#Conduct Bartlett's test for homogeneity of variance in library
+car
+stats::bartlett.test(mG3~ studytime.m, data=s_perform)
+#p value is > 0.05 so the result is not statistically significant
+so we can assume homogeneity
+
+#Conduct ANOVA using the userfriendlyscience test oneway
+#In this case we can use Tukey as the post-hoc test option since
+variances in the groups are equal 
+userfriendlyscience::oneway(as.factor(s_perform$studytime.m),
+y=s_perform$mG3,posthoc='Tukey')
+#No statistically significant difference was found
+
+#use the aov function - same as one way but makes it easier to 
+access values for reporting
+res2<-stats::aov(mG3~ studytime.m, data=s_perform)
+#Get the F statistic into a variable to make reporting easier
+fstat<-summary(res2)[[1]][["F value"]][[1]]
+#Get the p value into a variable to make reporting easier
+aovpvalue<-summary(res2)[[1]][["Pr(>F)"]][[1]]
+#Calculate effect
+aoveta<-sjstats::eta_sq(res2)[2]
+                                                                                                  
+                                </pre>
+                            </code>
+                        </div>
+                        <div class="output col-4">Output:
+                            <code>
+                            <pre>
+> psych::describeBy(s_perform$mG3, s_perform$studytime.m, mat=TRUE)
+item group1 vars   n     mean       sd median  trimmed    mad min max range       skew    kurtosis        se
+X11    1      1    1 103 10.09709 4.991197   10.0 10.40964 4.4478   0  19    19 -0.6252929 -0.14768278 0.4917973
+X12    2      2    1 190 10.10000 4.358960   10.0 10.50000 2.9652   0  19    19 -0.7165936  0.39850037 0.3162322
+X13    3      3    1  62 11.37097 4.805168   11.5 11.92000 3.7065   0  19    19 -0.9149251  0.58114988 0.6102569
+X14    4      4    1  27 11.25926 5.281263   12.0 11.56522 4.4478   0  20    20 -0.6998656 -0.07392943 1.0163795
+                            </pre>
+                            <pre>
+> stats::bartlett.test(mG3~ studytime.m, data=s_perform)
+
+Bartlett test of homogeneity of variances
+
+data:  mG3 by studytime.m
+Bartlett's K-squared = 3.5886, df = 3, p-value = 0.3095
+                            </pre>
+                            <pre>
+> userfriendlyscience::oneway(as.factor(s_perform$studytime.m),y=s_perform$mG3,posthoc='Tukey')
+### Oneway Anova for y=mG3 and x=studytime.m (groups: 1, 2, 3, 4)
+
+Omega squared: 95% CI = [NA; .04], point estimate = 0
+Eta Squared: 95% CI = [0; .03], point estimate = .01
+
+                                    SS  Df    MS   F    p
+Between groups (error + effect)  104.88   3 34.96 1.6 .189
+Within groups (error only)      8265.78 378 21.87         
+
+
+### Post hoc test: Tukey
+
+diff  lwr   upr  p adj
+2-1 0     -1.47 1.48 1.000
+3-1 1.27  -0.67 3.21 .328 
+4-1 1.16  -1.45 3.77 .659 
+3-2 1.27  -0.49 3.04 .248 
+4-2 1.16  -1.32 3.64 .624 
+4-3 -0.11 -2.89 2.67 1.000
+                            </pre>
+                            <pre>
+
+                            </pre>
+                        </code>
+                        </div>
+                        <div class="result col-12">Result:
+                            <p>
+                                <code>
+                                    <ul>
+                                        <li><strong>Bartlett’s test : For homogeneity of variance</strong>
+                                            <p>
+                                                <strong>F-statistic:</strong>
+
+                                                <br><strong>Null Hypothesis: All variances are equal. </strong>
+                                               <br> <strong>Alternate Hypothesis: All variances are not equal.</strong>
+                                                <br> From the test, we can see p-value is 0.31,which is greater than 0.05,
+                                                so it is not statistically significant, thus accepting null hypothesis(Homogenity).
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <strong>The p-value of the ANOVA-test(0.19) > 0.05, so we accept the null hypothesis
+                                            of equal means among groups and reject the alternate hypothesis of different means
+                                            among groups. </strong>
+                                            <br>No Statistically significant difference was found.
+                                        </li>
+                                        <li>
+                                            <strong>Eta squared: </strong>
+                                            <p>
+                                                eta squared = sum of squares between groups/total sum of squares (from our ANOVA output (rounded up))
+
+                                            </p>
+                                        </li>
+                                    </ul>
+                                    
+
+                                </code>
+                                
+                            </p>
+                        </div>
+                      </div>
+
+                    
+                    
+                    
+                </p>
+                </li>
+                <li><strong>Question:4</strong> Is there a difference between students with different family size(less than 3 and
+                    greater than 3) in terms of whether they get family support?
+                <p>
+                    <strong>Null Hypothesis:</strong> There is no difference between students with different family size(less than 3 and
+                    greater than 3) in terms of whether they get family support
+                    <br><strong>Alternate Hypothesis:</strong>There is difference between students with different family size(less than 3 and
+                    greater than 3) in terms of whether they get family support
+                </p>
+                <p>
+                    <strong>Chi-square Test:</strong>
+                    <ul>
+                        Views the data as two (or more) separate samples representing the different populations being compared
+                        <li>The same variable is measured for each sample by classifying individual subjects into categories of the variable.  
+                        </li>
+                        <li>The data are presented in a matrix with the different samples defining the rows and the categories of the variable defining the columns.
+                        </li>
+                        <li>The data, called observed frequencies, simply show how many individuals from the sample are in each cell of the matrix.            
+                        </li>
+                    </ul>
+                    <div class = 'container row'>
+                        <div class= 'code-part col-8'>Code:
+                            <code>
+                                <pre class='r'>
+#Use the Crosstable function
+#CrossTable(predictor, outcome, fisher = TRUE, chisq = TRUE,
+ expected = TRUE)
+gmodels::CrossTable(s_perform$famsize, s_perform$famsup.m,
+fisher = TRUE, chisq = TRUE, expected = TRUE, sresid = TRUE,
+format = "SPSS")
+
+#more simplistic way of doing Chi-Square
+
+#Create your contingency table
+mytable<-xtabs(~famsup.m+famsize, data=s_perform)
+
+ctest<-stats::chisq.test(mytable, correct=TRUE)#chi square test
+#correct=TRUE to get Yates correction needed for 2x2 table
+
+ctest#will give you the details of the test statistic and p-value
+ctest$expected#expected frequencies
+ctest$observed#observed frequencies
+ctest$p.value
+#Calculate effect size
+sjstats::phi(mytable)
+sjstats::cramer(mytable)                                                                               
+                                </pre>
+                            </code>
+                        </div>
+                        <div class="output col-4">Output:
+                            <code>
+                            <pre>
+> gmodels::CrossTable(s_perform$famsize, s_perform$famsup.m, fisher = TRUE, chisq = TRUE, expected = TRUE, sresid = TRUE, format = "SPSS")
+
+Cell Contents
+|-------------------------|
+|                   Count |
+|         Expected Values |
+| Chi-square contribution |
+|             Row Percent |
+|          Column Percent |
+|           Total Percent |
+|            Std Residual |
+|-------------------------|
+
+Total Observations in Table:  382 
+
+                | s_perform$famsup.m 
+s_perform$famsize |       no  |      yes  | Row Total | 
+------------------|-----------|-----------|-----------|
+            GT3 |       97  |      181  |      278  | 
+                |  104.796  |  173.204  |           | 
+                |    0.580  |    0.351  |           | 
+                |   34.892% |   65.108% |   72.775% | 
+                |   67.361% |   76.050% |           | 
+                |   25.393% |   47.382% |           | 
+                |   -0.762  |    0.592  |           | 
+------------------|-----------|-----------|-----------|
+            LE3 |       47  |       57  |      104  | 
+                |   39.204  |   64.796  |           | 
+                |    1.550  |    0.938  |           | 
+                |   45.192% |   54.808% |   27.225% | 
+                |   32.639% |   23.950% |           | 
+                |   12.304% |   14.921% |           | 
+                |    1.245  |   -0.968  |           | 
+------------------|-----------|-----------|-----------|
+    Column Total |      144  |      238  |      382  | 
+                |   37.696% |   62.304% |           | 
+------------------|-----------|-----------|-----------|
+
+
+Statistics for All Table Factors
+
+
+Pearson's Chi-squared test 
+------------------------------------------------------------
+Chi^2 =  3.418969     d.f. =  1     p =  0.06445125 
+
+Pearson's Chi-squared test with Yates' continuity correction 
+------------------------------------------------------------
+Chi^2 =  2.994468     d.f. =  1     p =  0.08354934 
+
+
+Fisher's Exact Test for Count Data
+------------------------------------------------------------
+Sample estimate odds ratio:  0.6507166 
+
+Alternative hypothesis: true odds ratio is not equal to 1
+p =  0.07526814 
+95% confidence interval:  0.4011554 1.057151 
+
+Alternative hypothesis: true odds ratio is less than 1
+p =  0.04240359 
+95% confidence interval:  0 0.9817213 
+
+Alternative hypothesis: true odds ratio is greater than 1
+p =  0.9748774 
+95% confidence interval:  0.4317107 Inf 
+
+
+    Minimum expected frequency: 39.20419 
+                        </pre>
+                            <pre>
+> ctest#will give you the details of the test statistic and p-value
+
+Pearson's Chi-squared test with Yates' continuity correction
+
+data:  mytable
+X-squared = 2.9945, df = 1, p-value = 0.08355
+                            </pre>
+                            <pre>
+> ctest$expected#expected frequencies
+            famsize
+famsup.m      GT3      LE3
+        no  104.7958 39.20419
+        yes 173.2042 64.79581
+                            </pre>
+                            <pre>
+> ctest$observed#observed frequencies
+        famsize
+famsup.m GT3 LE3
+     no   97  47
+     yes 181  57
+                            </pre>
+                            <pre>
+ctest$p.value
+[1] 0.08354934
+                            </pre>
+                            <pre>
+
+                            </pre>
+                        </code>
+                        </div>
+                        <div class="result col-12">Result:
+                            <p>
+                                <code>
+                                    <ul>
+                                        <li>
+                                            <strong>For one degree of freedom
+                                               <br> The critical value associated with p = 0.05 for Chi Square is 3.84 
+                                                <br> The critical value associated with p =0.01 it is 6.64
+                                                Chi-square values higher than this critical value are associated with a statistically low probability that H0 holds.
+                                                </strong>
+                                                <p>
+                                                    In our case <x></x>
+                                                    <2></2> = 3 which is less than 3.84(critical value), Therefore
+                                                    there is no significant association between family size and 
+                                                    their support to the
+                                                </p>
+                                        </li>
+                                    </ul>
+                                    
+
+                                </code>
+                                
+                            </p>
+                        </div>
+                      </div>
+                </p>
+                </li>
+           
+            </ul>
+        </div>
+
+        <h3>Statistical measures on mg1,mg2</h3>
+        <p>
+            <strong>Null Hypothesis:</strong>
+            <strong>Alternate Hypothesis:</strong>
+          </p>
+            <ul>
+              <li><strong>Measure of Central tendency:</strong>Common measures of location, or central tendency, 
+                are the arithmetic mean, median, mode, and interquartile mean.</li>
+                <div class='row'>
+                  <div class="col-6 row">
+                    <img class='col-12' src="./images/summary.png" alt="">
+                    <img class='col-12' src="./images/summary_mg2.png" alt="">
+                  </div>
+                  <div class="col-6 row">
+                    <img class='col-6' src="./images/mg_2.png" alt="">
+                    <img class='col-6' src="./images/mg1.png" alt="">
+                  </div>
+                </div>
+               <p>
+                 From the above, we can infer that mG2 has some outliers <strong>with 0 values,</strong> 
+                 we have to further test what these 0 values imply and their significance.
+                 <br>
+                 If there is no significance we can remove those values and try to make the distribution 
+                 more normal.
+                 <br>
+                 Both the variables need some caculations to transform them as normal distribution.
+               </p>
+            </ul>
+          </div>
+
+    </div>
+</body>
+</html>
