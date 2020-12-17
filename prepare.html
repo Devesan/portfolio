@@ -3,13 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Population vs  Sample</title>
+    <title>Prepare</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/portfolio/site.css" > 
 </head>
 <body>
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <a class="navbar-brand" href="./index.html">Dev's Portfolio</a>
+    <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button> -->
+  
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+      <ul class="navbar-nav mr-auto">
+       
+      </ul>
+      <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="./index.html">Home </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./prepare.html">Prepare <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./explore.html">Explore</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./model.html">Model</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./r_code.html">R code</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./report.html">Reports</a>
+          </li>
+          <!-- <li class="nav-item">
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+          </li> -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Research Questions</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown01">
+              <a class="dropdown-item" href="./explore.html#research_1">Question 1</a>
+              <a class="dropdown-item" href="./explore.html#research_2">Question 2</a>
+              <a class="dropdown-item" href="./explore.html#research_3">Question 3</a>
+              <a class="dropdown-item" href="./explore.html#research_4">Question 4</a>
+            </div>
+          </li>
+        </ul>
+    </div>
+    </div>
+  </nav>
     <div class="jumbotron">
       <div class="container">
         <h1>Prepare</h1>
@@ -250,7 +296,7 @@
             the sample
             </li>
           </ul>
-          <img src="./images/pop.gif" alt="web.standard.edu">
+          <img src="./images/pop.gif" id='popvssamp' alt="web.standard.edu">
         </div>
         <hr>
         <h3>Experiments and Variable</h3>
@@ -267,9 +313,9 @@
         </p>
 
         <h3>Types of Data</h3>
-        <img src="./images/Screenshot 2020-11-25 at 3.47.01 PM.png" width="1080px" height="720px" alt="">
+        <img class="prepare" src="./images/Screenshot 2020-11-25 at 3.47.01 PM.png" width="1080px" height="720px" alt="">
         <h3>Levels of measurements</h3>
-        <img src="./images/Screenshot 2020-11-25 at 3.39.46 PM.png" width="1080px" height="720px" alt="">
+        <img class='prepare' src="./images/Screenshot 2020-11-25 at 3.39.46 PM.png" width="1080px" height="720px" alt="">
         <!-- <h3>Measure of Central Tendancy</h3>
           <h3>Frequency Distributions:</h3>
           <ul>
@@ -382,14 +428,14 @@
             <p>The dataset contains details about the various factors that could possibly affect a
               students performance. Some of the variables that I'm interested in are:
               <ul>
-                <li><strong>Medu & Fedu:</strong>Which could possibly have effect on the the ward's
-                performance.(Nominal:levels: 1,2,3,4)</li>
-                <li><strong>Pstatus:</strong>Which may or may not have effect on the performance.
-                  (Nominal: 'T' - living together or 'A' - apart)</li>
+                <!-- <li><strong>Medu & Fedu:</strong>Which could possibly have effect on the the ward's -->
+                <!-- performance.(Nominal:levels: 1,2,3,4)</li> -->
+                <!-- <li><strong>Pstatus:</strong>Which may or may not have effect on the performance. -->
+                  <!-- (Nominal: 'T' - living together or 'A' - apart)</li> -->
                 <!-- <li><strong>reason:</strong>The reason for choosing the school may have impact on their
                 involvement and therby their performance.(nominal: close to 'home', school 'reputation', 'course' preference or 'other')</li> -->
                 <li><strong>studytime:</strong>How much effort the student puts in.(Ordinal: 1 - < 2 hours, 2 - 2 to 5 hours, 3 - 5 to 10 hours, or 4 - >10 hours)</li>
-                <li><strong>schoolsup:</strong>Support from school may or may not have some effect
+                <li><strong>familysup:</strong>Support from family may or may not have some effect
                   (Nominal: yes or no)</li>
                 <!-- <li><strong>activities:</strong>Let's analyse does extra-curricular activities affect
                    performance (binary: yes or no)</li> -->
@@ -397,24 +443,23 @@
                 <li><strong>internet:</strong>Does the student have internet connection? (Nominal: yes or no)</li>
                 <!-- <li><strong>romantic:</strong>Is there any romantic relationship (binary: yes or no)</li> -->
                 <!-- <li><strong>famrel:</strong>The relationship with the family (numeric: from 1 - very bad to 5 - excellent)</li> -->
-                <li><strong>health:</strong>Health of the student. (Ordinal: from 1 - very bad to 5 - excellent)</li>
-                <li><strong>Absences:</strong>Number of Absences from the school(continous(interval): 0 to 93)</li>
+                <!-- <li><strong>health:</strong>Health of the student. (Ordinal: from 1 - very bad to 5 - excellent)</li> -->
+                <!-- <li><strong>Absences:</strong>Number of Absences from the school(continous(interval): 0 to 93)</li> -->
                 <li><strong>mg1,mg2</strong>Maths first,second period grade.(continous(interval): 0to 20)</li>
-                <li><strong>pg1,pg2</strong>Portugese first,second period grade.(continous(interval): 0to 20)</li>
+                <!-- <li><strong>pg1,pg2</strong>Portugese first,second period grade.(continous(interval): 0to 20)</li> -->
               </ul>
             </p>
             </li>
             </ul>
             <h3>Research Questions:</h3>
             <ul>
-              <li><strong>Question:1</strong> Is there a Relationship between G2 and G3? </li>
-
-              <li><strong>Question:2</strong> Is there a Relationship between G3 and students trying for higher education?</li>
-              <li><strong>Question:3</strong> Is there a Relationship between G3 and their study-time?</li>
-              <li><strong>Question:4</strong> Is there a relation betweem age and G3?</li>
+              <li><strong>Question:1</strong> Is there a Relationship between mG2 and mG3? </li>
+              <li><strong>Question:2</strong> Is there a Relationship between mG3 and students trying for higher education?</li>
+              <li><strong>Question:3</strong> Is there a Relationship between mG3 and their study-time?</li>
+              <li><strong>Question:4</strong> Is there a difference between students with different family size(less than 3 and greater than 3) in terms of whether they get family support?</li>
             </ul>
        
-            <p><a class="btn btn-primary btn-lg" href="./explore.html" role="button">Let's Explore &raquo;</a></p>
+            <p><a class="btn btn-primary btn-md" href="./explore.html" role="button">Let's Explore &raquo;</a></p>
 
             
 
@@ -424,14 +469,6 @@
             <h3>Covariance and correlation</h3>
             <img src="./images/Screenshot 2020-11-25 at 7.30.37 PM.png" width="1080px" height="720px" alt="">
           </div> -->
-        </div>
-
-        <div class = 'container row'>
-          <div class= 'code-part col-9'>Code:</div>
-          <div class="output col-3">Output:
-            <img src="" alt="">
-          </div>
-          <div class="result col-9">Result:</div>
         </div>
 
       </body>

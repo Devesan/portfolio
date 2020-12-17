@@ -10,9 +10,9 @@
     
 }
 .r{
-    color:#E83F8B;
-    font-weight: 700;
-    font-size: 1rem;
+    color:blue;
+    font-weight: 600;
+    font-size: 0.9rem;
 }
 .output{
     /* position:absolute; */
@@ -22,11 +22,32 @@
 }
 .result{
     /* height: 300px; */
-    border-bottom: 1px solid;
+    /* border-bottom: 1px solid; */
 }
 img{
     height: 300px;
 }
+.prepare{
+    height:720px;
+}
 code{
     color: black;
+}
+
+/* Prepare */
+#popvssamp{
+    display:block;
+    margin:auto;
+}
+body{
+    padding-top: 70px;
+}
+.output{
+    border: 1px solid;
+}
+.result{
+    border: 1px solid;
+}
+.img-output{
+    border: 1px solid;
 }
