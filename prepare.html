@@ -406,6 +406,61 @@
                 on the characteristics of the students involved in the dataset. </p>
                 <p>So this sample, cannot extend to provide the population parameter.</p>
             </li>
+            <li><strong>Missing Data:</strong>
+            <ul>
+              <li>It can reduce the representativeness of the samples. </li>
+              <li>Missing data affects the validity of statistical analysis and can lead to invalid conclusions.
+              </li>
+              <li>It can occur due to errors, mistakes, or lack of foresight by the researcher or problems outside the control of the researcher </li>
+              <li>Sometimes it can be deliberate added to change the statistics of the sample.</li>
+              <li>“Real” missing data can seldom be classified into just one of the three (MCAR- Missing completely
+                at Random, MAR- Missing At Random, MNAR- Missing Not At Random)</li>
+            </ul>
+            <ul><strong>Based on the Dataset:</strong>
+              <li>In our case, there are no missing data at first glance. </li>
+              <li>But on a closer look we can see some values are 0, this maybe caused due to several factors
+                which include student absent during the exam.
+              </li>
+              <li> Since the percentage of these values for our variables of interest are very less, we will ignore it.</li>
+              <li>Other methods of solving this problem may include imputing in which we impute the mean value 
+                of the column to these missing values.
+              </li>
+              <div class = 'container row'>
+                <div class= 'code-part col-12'>Code:
+                    <code>
+                        <p class= 'r'>
+                          na_count <-lapply(s_perform, function(y) round((sum(length(which(y==0))))/length(y)*100))
+                          <br>
+                          na_count <- data.frame(na_count)
+                          <br>
+                          na_count
+                        </p>
+                    </code>
+                    
+                   
+                </div>
+                <div class="result col-12"><strong>Result:</strong> 
+                    <code>
+                        <pre>
+  > na_count
+  school sex age address famsize Pstatus Medu Fedu Mjob Fjob reason nursery internet guardian.m traveltime.m
+1      0   0   0       0       0       0    1    1    0    0      0       0        0          0            0
+  studytime.m failures.m schoolsup.m famsup.m paid.m activities.m higher.m romantic.m famrel.m freetime.m
+1           0         83           0        0      0            0        0          0        0          0
+  goout.m Dalc.m Walc.m health.m absences.m mG1 mG2 mG3 guardian.p traveltime.p studytime.p failures.p
+1       0      0      0        0         30   0   3  10          0            0           0         91
+  schoolsup.p famsup.p paid.p activities.p higher.p romantic.p famrel.p freetime.p goout.p Dalc.p Walc.p
+1           0        0      0            0        0          0        0          0       0      0      0
+  health.p absences.p pG1 pG2 pG3
+1        0         39   0   0   1
+                    </pre>
+                    </code>
+                    
+                </div>
+              </div>
+          </ul>
+
+            </li>
 
             <li><strong>Concepts of Interest:</strong>
             <strong>
