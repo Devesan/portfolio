@@ -293,6 +293,121 @@ Max.   :19.00   Max.   :20.00
                                 </ul>
                             </li>
                         </ol>
+                        <strong>Different tests for different categories:</strong>
+                        <table class="table table-bordered">
+                            <thead>
+                              <tr>
+                                <th>Comparing</th>
+                                <th>Dependent Variable</th>
+                                <th>Independent Variable</th>
+                                <th>Parametric Tests</th>
+                                <th>Non-Parametric Tests</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                            <td>The means of two
+                                INDEPENDENT groups</td>
+                            <td>Continuous/
+                                scale</td>    
+                            <td>Categorical/
+                                nominal</td>    
+                            <td>Independent t-test</td>    
+                            <td>Mann-Whitney test</td>    
+                            </tr>
+                            <tr>
+                                <td>The means of 2 paired
+                                    (matched) samples e.g.
+                                    weight before and after a diet
+                                    for one group of subjects</td>
+                                <td>Continuous/
+                                    scale</td>    
+                                <td>Time variable
+                                    (time 1 =
+                                    before, time
+                                    2 = after)</td>    
+                                <td>Paired t-test</td>    
+                                <td>Wilcoxon signed rank
+                                    test</td>    
+                            </tr>
+                                <tr>
+                                    <td>The means of two
+                                        INDEPENDENT groups</td>
+                                    <td>Continuous/
+                                        scale</td>    
+                                    <td>Categorical/
+                                        nominal</td>    
+                                    <td>Independent t-test</td>    
+                                    <td>Mann-Whitney test</td>    
+                                    </tr>
+                                    <tr>
+                                        <td>The means of 3+ independent
+                                            groups</td>
+                                        <td>Continuous/
+                                            scale</td>    
+                                        <td>Categorical/
+                                            nominal</td>    
+                                        <td>Independent t-test</td>    
+                                        <td>Mann-Whitney test</td>    
+                                        </tr>
+                                        <tr>
+                                            <td>The means of two
+                                                INDEPENDENT groups</td>
+                                            <td>Continuous/
+                                                scale</td>    
+                                            <td>Categorical/
+                                                nominal</td>    
+                                            <td>One-way ANOVA</td>    
+                                            <td>Kruskal-Wallis test</td>    
+                                            </tr>
+                                            <tr>
+                                                <td>The 3+ measurements on the
+                                                    same subject</td>
+                                                <td>Continuous/
+                                                    scale</td>    
+                                                <td>Time variable</td>    
+                                                <td>Repeated
+                                                    measures ANOVA</td>    
+                                                <td>Friedman test</td>    
+                                                </tr>  
+
+                                                <tr>
+                                                    <td>Relationship between 2
+                                                        continuous variables</td>
+                                                    <td>Continuous/
+                                                        scale</td>    
+                                                    <td>Continuous/
+                                                        scale</td>    
+                                                    <td>Pearson’s
+                                                        Correlation Coefficient</td>    
+                                                    <td>Spearman’s
+                                                        Correlation Coefficient (also use for
+                                                        ordinal data)</td>    
+                                                    </tr>  
+                                                    <tr>
+                                                        <td>Predicting the value of one
+                                                            variable from the value of a
+                                                            predictor variable</td>
+                                                        <td>Continuous/
+                                                            scale</td>    
+                                                        <td>Any</td>    
+                                                        <td>Simple Linear
+                                                            Regression</td>    
+                                                        <td></td>    
+                                                        </tr>  
+                                                        <tr>
+                                                            <td>Assessing the relationship
+                                                                between two categorical
+                                                                variables</td>
+                                                            <td>Categorical/
+                                                                nominal</td>    
+                                                            <td>Categorical/
+                                                                nominal</td>    
+                                                            <td></td>    
+                                                            <td>Chi-squared test</td>    
+                                                            </tr>  
+                            </tbody>
+                          </table>
                         </p>
                         </li>
                         </ul>
@@ -466,10 +581,10 @@ Excess Kur (g2)
                                             <h4>Reporting Normality for mG2:</h4> 
                                                 <p>
                                                     mG2 was assessed for normality. Visual inspection of the histogram and QQ-Plot identified 
-                                                    some issues with skewness and kurtosis. The standardised score for kurtosis (`r round(tpkurt[1]/tpkurt[2],2)`)
+                                                    some issues with skewness and kurtosis. The standardised score for kurtosis (`r round(mG2kurt[1]/mG2kurt[2],2)`)
                                                     can be considered acceptable using the criteria proposed by West, Finch and Curran (1996), 
-                                                    but the standardised score for skewness (`r round(tpskew[1]/tpskew[2],2)`)  was outside the
-                                                    acceptable range.  However 100% of standardised scores for total optimism and associated sensation fall within the bounds
+                                                    but the standardised score for skewness (`r round(mG2skew[1]/mG2skew[2],2)`)  was outside the
+                                                    acceptable range.  However 100% of standardised scores for mG2 fall within the bounds
                                                     of +/- 3.29, using the guidance of Field, Miles and Field (2013) the data can be considered 
                                                     to approximate a normal distribution.
                                                 </p>
@@ -546,10 +661,10 @@ Excess Kur (g2)
                                                 <h4>Reporting Normality for mG3:</h4> 
                                                 <p>
                                                     mG3 was assessed for normality. Visual inspection of the histogram and QQ-Plot identified 
-                                                    some issues with skewness and kurtosis. The standardised score for kurtosis (`r round(tpkurt[1]/tpkurt[2],2)`)
+                                                    some issues with skewness and kurtosis. The standardised score for kurtosis (`r round(mG3kurt[1]/mG3kurt[2],2)`)
                                                     can be considered acceptable using the criteria proposed by West, Finch and Curran (1996), 
-                                                    but the standardised score for skewness (`r round(tpskew[1]/tpskew[2],2)`)  was outside the
-                                                    acceptable range.  However 100% of standardised scores for total optimism and associated sensation fall within the bounds
+                                                    but the standardised score for skewness (`r round(mG3skew[1]/mG3skew[2],2)`)  was outside the
+                                                    acceptable range.  However 100% of standardised scores for mG3 fall within the bounds
                                                     of +/- 3.29, using the guidance of Field, Miles and Field (2013) the data can be considered 
                                                     to approximate a normal distribution.
                                                 </p>
@@ -793,7 +908,6 @@ t
                                             </li>
                                             <li><strong>Levene's Test: For homogeneity of variance</strong>
                                                 <p>
-                                                    <strong>F-statistic:</strong>
 
                                                     <br><strong>Null Hypothesis: All variances are equal. </strong>
                                                    <br> <strong>Alternate Hypothesis: All variances are not equal.</strong>
@@ -847,7 +961,7 @@ t
 
                     </p>
                 </li>
-                <li id = 'research_3'><strong>Question:3</strong> Is there a Relationship between G3 and their study-time?
+                <li id = 'research_3'><strong>Question:3</strong> Is there a Relationship between mG3 and their study-time?
                 <p>
                     <strong>Group: 1 - < 2 hours, Group: 2 - 2 to 5 hours, Group: 3 - 5 to 10 hours, or Group: 4 - >10 hours</strong>
                     <p>
@@ -988,7 +1102,7 @@ diff  lwr   upr  p adj
                                     <p>
                                         A one-way between groups analysis of Variance(Anova) was conducted to explore the impact of study-time
                                         of a student on mG3. study-time variable was divided in to 4 groups( Group: 1 - < 2 hours, Group: 2 - 2 to 5 hours, Group: 3 - 5 to 10 hours, or Group: 4 - >10 hours).
-                                        There was not statistically significant difference in the G3 scores, p>0.05, which is also statistically insignificant 
+                                        There was not statistically significant difference in the mG3 scores, p>0.05, which is also statistically insignificant 
                                         .The effect size was calculated using eta-squared was (0.08) which is small.
                                     </p>
                             </p>
@@ -1161,10 +1275,9 @@ ctest$p.value
                                                 Chi-square values higher than this critical value are associated with a statistically low probability that H0 holds.
                                                 </strong>
                                                 <p>
-                                                    In our case <x></x>
-                                                    <2></2> = 3 which is less than 3.84(critical value), Therefore
+                                                    In our case x<sup>2</sup> = 3 which is less than 3.84(critical value), Therefore
                                                     there is no significant association between family size and 
-                                                    their support to the
+                                                    their support to the student
                                                 </p>
                                         </li>
                                     </ul>

@@ -116,10 +116,10 @@
                             </li>
                             <li>If a model has too many predictors it begins to model the random noise in the data. 
                                 This condition is known as overfitting the model and it produces misleadingly high R-squared values and a lessened ability to make predictions.
-                                Adjusted R2 </li>
+                                Adjusted R<sup>2</sup> </li>
                                 <li>
-                                    Adjusts value of R2 based on number of variables in the model.
-                                    Adjusted R2 is reported for multiple linear regression
+                                    Adjusts value of R<sup>2</sup> based on number of variables in the model.
+                                    Adjusted R<sup>2</sup> is reported for multiple linear regression
                                 </li>
                         </ul>
 
@@ -133,17 +133,18 @@
                 <strong>Beta Values:</strong>
                 <p>
                     It gives the unit change of the response value with respect to the predictor value.
+                   <br>
                     <strong>Standardized Beta Values:</strong>Gives the value in terms of standard deviation.Useful 
                     in case of comparing models.
                 </p>
                 </p>
               </p>
               <p>
-                  <strong>Linear Regression equation:</strong>
+                  <h3>Linear Regression equation:</h3>
                   <p>
                     <h5>Equation: y= b <sub>0</sub>+ b <sub>1</sub>X</h5>
                     where, b <sub>0</sub> is the intercept and b <sub>1</sub> is the regression coefficent.
-                    <strong>Coefficients:</strong>
+                  <br>  <strong>Coefficients:</strong>
                     <p>
                         Coefficients gives the values to construct the linear equation(i.e. The intecept and the regression coefficent)
                     </p>  
@@ -178,6 +179,11 @@
         </p>
         <p>
             <ul>
+                <h4> Research Question 5: </h4>
+                    Can we predict mG3 value with various predictors using linear Regression ?
+
+                    <strong>Null Hypothesis:</strong> The values of mG3 cannot be predicted with the predictor variables(mG2, higher.m) using linear Regression.
+                    <strong>Alternate Hypothesis:</strong> The values of mG3 can be predicted with the predictor variables(mG2, higher.m) using linear Regression.
                 <h4>Models:</h4>
                 <li><strong>Model 1:</strong>Comparing the relationship between mG2 and mG3:
                     <div class = 'container row'>
@@ -208,6 +214,9 @@ stargazer(model1, type="text") #Tidy output of all the required stats
                         <div class="result col-6"><strong>Result:</strong>
                             <p>
                                 <ul>
+                                    <li>The p-value indicates our model is significant, so we can reject the null hypothesis and 
+                                        accept the alternate hypothesis(We can predict the values of mG3 with predictor variable mG2)
+                                    </li>
                                     <li>Increase marks in mG2 appears to associated with increase marks in mG3</li>
                                     <li>There appears to be a strong positvie correlation bewteen the two</li>
                                     <li>Therefore there is good justification for using regression to look at prediction.</li>
@@ -457,8 +466,11 @@ stargazer(model1, model2, type="text")
                         <div class="result col-6"><strong>Result:</strong>
                             <p>
                                 <ul>
+                                    <li>The p-value indicates our model is significant, so we can reject the null hypothesis and 
+                                        accept the alternate hypothesis(We can predict the values of mG3 with predictor variable mG2 and higher.m)
+                                    </li>
                                     <li>From the F-statistics and the p-value, our model is still significant.</li>
-                                    <li>New regression equation with sex as another predictor is:
+                                    <li>New regression equation with higher.m as another predictor is:
                                         <strong>Predicted mG3 =  0.459 +  0.989 * 'mG2' - 0.161  * 'yes'</strong>
                                     </li>
                                     <li>The new standardised reqression equation is:
@@ -816,8 +828,12 @@ stargazer(model2, model3, type="text")
                         <div class="result col-6"><strong>Result:</strong>
                             <p>
                                 <ul>
+                                    <li>The p-value indicates our model is significant, so we can reject the null hypothesis and 
+                                        accept the alternate hypothesis(We can predict the values of mG3 with predictor variable mG2, higher.m
+                                        and indication term mG2*higher.m)
+                                    </li>
                                     <li>From the F-statistics and the p-value, our model is still significant.</li>
-                                    <li>New regression equation with sex as another predictor is:
+                                    <li>New regression equation with higher.m as another predictor is:
                                         <strong>Predicted mG3 =  2.48 +   0.755 * 'mG2' -2.197 * 'yes' + 0.235 * 'yes*mG2'</strong>
                                     </li>
                                     <li>The new standardised reqression equation is:
@@ -1201,9 +1217,9 @@ s_perform$mG2   s_perform$higher.m s_perform$inthighmG2
                     <li>
                         Indicates the change in odds resulting from a unit change in the predictor.
 <br>
-                        OR > 1: Predictor variables, Probability of outcome occurring .
+                        OR > 1: Predictor increases, Probability of outcome also increases .
 <br>
-                        OR < 1: Predictor variables, Probability of outcome occurring .
+                        OR < 1: Predictor increases, Probability of outcome decreases.
 
                     </li>
                     <li>
@@ -1262,6 +1278,8 @@ The ROC curve plots out the sensitivity and specificity for every possible decis
         </p>
         <p>
             <div>
+                <h4> Research Question 5: </h4>
+                Can we predict whether a student will go for higher studies(higher.m) with various predictors using logistic Regression ?
                 <ul>
                     <li>
                         <h3>Model 1:</h3>
@@ -1330,7 +1348,7 @@ generalhoslem::logitgof(as.factor(s_perform$higher.m), fitted(logmodel1))
                                             However we know this is statistically significant. 
                                         </li>
                                         <li>
-                                            The intercept or constant are the odds of answering yes to planning for higher studiies when female 65
+                                            The intercept or constant are the odds of answering yes to planning for higher studies when male 65
                                             <br>
                                            The odds are higher when female in comparison to being male.
                                         </li>
@@ -1518,6 +1536,7 @@ arm::invlogit(coef(logmodel2)[1]+ coef(logmodel2)[2]*1 +coef(logmodel2)[3]*0)
                             <div class="result col-12"><strong>Result:</strong>
                                 <p>
                                     <ul>
+                                        <li>Based on p-value, we can reject null hypothesis and accept alternate hypothesis</li>
                                        <li>The Pr(>|z|) column shows the two-tailed p-values testing the null hypothesis that the coefficient is equal to zero (i.e. no significant effect). 
                                         <br>
                                         The usual cut-off value is 0.05. 
@@ -1578,6 +1597,7 @@ arm::invlogit(coef(logmodel2)[1]+ coef(logmodel2)[2]*1 +coef(logmodel2)[3]*0)
                                     <ul>
                                         <li>We can see an improvement in the ROC curve in Model 2
                                              compared to Model 1 </li>
+                                        <li>The AUC of model 2 is 0.766 which has increased from the AUC of model 1(0.685)</li>
                                     </ul>
                                 </div>
                             </div>
@@ -1814,16 +1834,17 @@ X-squared = 0.008978, df = 1, p-value = 0.9245
                   <tr>
                     <td>
                         FA tries to achieve parsimony by explaining the maximum amount of common variance
-                         in a correlation matrix using the smallest number of explanatory constructs.
+                        in a correlation matrix using the smallest number of explanatory constructs.
                     </td>
                     <td>
-                        These ‘explanatory constructs’ are called factors.
-                    </td>
-                     </tr>
-                     <tr>
-                      <td>
                         PCA tries to explain the maximum amount of total variance in a correlation matrix. 
                       </td>
+                     </tr>
+                     <tr>
+                     
+                      <td>
+                        These ‘explanatory constructs’ are called factors.
+                    </td>
                         <td>
                             It does this by transforming the original variables into a set of linear components.
                         </td>
@@ -1843,6 +1864,8 @@ X-squared = 0.008978, df = 1, p-value = 0.9245
                   </p>
               </p>
         </p>
+        <h4> Research Question 5: </h4>
+        Can we do dimension reduction for the "studentpIusepersonality" dataset ?
        <ul>
            <li><strong>Step 1: Checking for Correlation</strong>
             <div class = 'container row'>
@@ -2313,7 +2336,7 @@ Cumulative Var 0.232 0.357 0.439 0.520 0.577 0.628 0.672 0.714 0.753 0.790 0.824
     </div>
 </div></li>
 <li><strong>Step 5: Factor Rotation:</strong>
-    div class = 'container row'>
+   <div class = 'container row'>
     <div class= 'code-part col-12'>Code:
         <code>
             <pre class='r'>
