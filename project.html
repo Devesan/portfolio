@@ -1,0 +1,1043 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/portfolio/site.css" > 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">   
+<title>Portfolio</title>
+</head>
+<body>
+    <!-- NavBar -->
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <a class="navbar-brand" href="./index.html">Dev's Portfolio</a>
+        <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button> -->
+      
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+          <ul class="navbar-nav mr-auto">
+           
+          </ul>
+          <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item ">
+                <a class="nav-link" href="./index.html">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="./project.html">Independent Project <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./r_code.html">R code</a>
+              </li>
+            </ul>
+        </div>
+        </div>
+      </nav>
+      <div class="container">
+        <div class='section_1'>
+            <h2><strong>Section 1 &ndash; Research Questions</strong></h2>
+            <p><strong>Question 1: </strong>Can we predict the global score of the student using their Quantitative Reasoning and Critical Reading?</p>
+            <p><strong>Question 2: </strong>Can we predict the global score of the student using their Quantitative Reasoning and Critical Reading with School Nature as dummy variable?</p>
+
+        </div>
+  
+        <div class="section_2">
+            <h2><strong>Section 2 &ndash; Dataset</strong></h2>
+            <ul>
+            <li><strong>Representativeness: </strong>The representativeness of the sample is determined by the randomness of the sample and its ability to represent the whole population</li>
+            <li><strong>Statistics of variable of interest: </strong>The dataset is analysed and some variables of interest for the understanding of the Research Questions are selected.</li>
+            <p> The summary statistics of the variables of interest are shown below:</p>
+            
+            <div class = 'container row'>Summary Statistics:
+                <div class= 'result col-12'>
+                    <code>
+                        <pre class='r'>
+> var_of_interest <- c('gender','revenue','school_nat','cr_pro','qr_pro','g_sc')
+> summary(s_perform[var_of_interest])
+    gender            revenue           school_nat            cr_pro          qr_pro            g_sc      
+    Length:12406       Length:12406       Length:12406       Min.   :  1.0   Min.   :  1.00   Min.   : 37.0  
+    Class :character   Class :character   Class :character   1st Qu.: 42.0   1st Qu.: 65.00   1st Qu.:147.0  
+    Mode  :character   Mode  :character   Mode  :character   Median : 67.0   Median : 85.00   Median :163.0  
+                                                            Mean   : 62.2   Mean   : 77.42   Mean   :162.7  
+                                                            3rd Qu.: 86.0   3rd Qu.: 96.00   3rd Qu.:179.0  
+                                                            Max.   :100.0   Max.   :100.00   Max.   :247.0  
+                        </pre>
+                    </code>
+                </div>
+            
+              </div>
+</ul>
+            <ul>
+            <li><strong>Visualization of the Variables: </strong>To further understand the data of the variables of interest, we do some visualizations to understand the distribution of the data.</li>
+            </ul>
+
+            <div class = 'container row'>
+                
+                <div class="output explore col-12 ">Output:
+                    <div class='row'>
+                        <div class='col-6'>
+                            <strong>school_type analysis</strong>
+                            <img src="./img/Rplot.png" alt="">
+                            
+                        </div>
+                        <div class='col-6'>
+                            <strong>School Nature analysis</strong>
+                            <img src="./img/Rplot01.png" alt="">
+                        </div>
+                        <div class='col-6'>
+                            <strong>Gender wise analysis</strong>
+                            <img src="./img/Rplot02.png" alt="">
+                        </div>
+                        <div class='col-6'>
+                            <strong>Revenue wise analysis</strong>
+                            <img src="./img/plot.png" alt="">
+                        </div>
+                        
+                        
+                        
+                       
+                    </div>>
+                 
+                </div>
+                <div class="result col-12">Observations:
+                    <p>
+                        <code>
+                            <ul>
+                                <li><strong>School type analysis: </strong>It shows an outlier &lsquo;Not apply&rsquo; which is in very few number only 5 records, so we can ignore those outliers.</li>
+                                <li><strong>School Nature analysis: </strong>It shows the classification of 12,411 records based on the school they attended before engineering. It can be observed there is only a slight difference between the public and private institutes.</li>
+                                <li><strong>Gender wise analysis:</strong> It shows the classification of male and female pursuing engineering. It can be observed Females are considerably less compared to male.</li>
+                                </ul>
+                        </code>
+                        
+                    </p>
+                </div>
+              </div>
+            
+            <p>
+                <ul>
+                    <li><strong>Assessing Normality:</strong> The normality of variables like ENG_S11, ENG_PRO, CR_S11, CR_PRO are determined as it is necessary for further analysis of the dataset and building a model.
+                    <ul>
+                        <li><strong>For g_sc:</strong>
+                            <p><strong>Inspection:</strong>
+                                <div class = 'container row'>
+                                    <div class= 'code-part col-8'>Descriptive Inspection:
+                                        <code>
+                                            <pre class='r'>
+> pastecs::stat.desc(s_perform$g_sc, basic=F)
+    median         mean      SE.mean CI.mean.0.95          var      std.dev     coef.var 
+163.0000000  162.7153797    0.2074881    0.4067090  534.0948009   23.1104911    0.1420302 
+> g_scskew<-semTools::skew(s_perform$g_sc)
+> g_sckurt<-semTools::kurtosis(s_perform$g_sc)
+> g_scskew[1]/g_scskew[2]
+skew (g1) 
+-4.322486 
+> g_sckurt[1]/g_sckurt[2]
+Excess Kur (g2) 
+    -1.715517 
+> g_sc<- abs(scale(s_perform$g_sc))
+> FSA::perc(as.numeric(g_sc), 1.96, "gt")
+[1] 4.05449
+> FSA::perc(as.numeric(g_sc), 3.29, "gt")
+[1] 0.1531517
+                                            </pre>
+                                        </code>
+                                    </div>
+                                    <div class="output explore col-4">Output:
+                                      <img src="./img/Rplot17.png" alt="">
+                                      <img src="./img/Rplot18.png" alt="">
+        
+                                    </div>
+                                    <div class="result col-12">Result:
+                                        <p>
+                                            <code>
+                                                <ul>
+                                                    <li>
+                                                        From the density curve and the q-q plot we can assume through 
+                                                        visual inspection that the vairable maybe normal. But cannot confirm it 
+                                                        because of the slight skew caused by outliers so we do descrpitive analysis
+                                                        to make sure that the outliers are within the expected limit.
+                                                    </li>
+                                                    <li>
+                                                From the above summary statistics we can observe that skew is 
+                                                -4.3, which is (>2) and not acceptable, so we look further
+                                                into it by finding out the outliers that are contributing
+                                                the skew.
+                                                    </li>
+                                                    <li>
+                                                Since our dataset has more than 80 records, we use +/- 3.29 as our measure.
+                                                In that case we have 0.15% of values fall outside +/- 3.29. Therefore, it is 
+                                                okay to treat this as Normal.
+                                                    </li>
+                                                </ul>
+                                            </code>
+                                            
+                                        </p>
+                                    </div>
+                                  </div>
+                            </p>
+                            
+                        </li>
+                        <!-- <li><strong>For qr_pro:</strong>
+                            <p><strong>Inspection:</strong>
+                                <div class = 'container row'>
+                                    <div class= 'code-part col-8'>Descriptive Inspection:
+                                        <code>
+                                            <pre class='r'>
+> pastecs::stat.desc(s_perform$qr_pro, basic=F)
+    median         mean      SE.mean CI.mean.0.95          var      std.dev     coef.var 
+85.0000000   77.4213284    0.2035390    0.3989681  513.9574943   22.6706307    0.2928215 
+> qr_proskew<-semTools::skew(s_perform$qr_pro)
+> qr_prokurt<-semTools::kurtosis(s_perform$qr_pro)
+> qr_proskew[1]/qr_proskew[2]
+skew (g1) 
+-53.68549 
+> qr_prokurt[1]/qr_prokurt[2]
+Excess Kur (g2) 
+        14.34043 
+> qr_pro<- abs(scale(s_perform$qr_pro))
+> FSA::perc(as.numeric(qr_pro), 1.96, "gt")
+[1] 6.085765
+> FSA::perc(as.numeric(qr_pro), 3.29, "gt")
+[1] 0.1773335
+                                            </pre>
+                                        </code>
+                                    </div>
+                                    <div class="output explore col-4">Output:
+                                      <img src="./img/Rplot19.png" alt="">
+                                      <img src="./img/Rplot20.png" alt="">
+        
+                                    </div>
+                                    <div class="result col-12">Result:
+                                        <p>
+                                            <code>
+                                                <ul>
+                                                    <li>
+                                                        From the density curve and the q-q plot we can assume through 
+                                                        visual inspection that the vairable maybe normal. But cannot confirm it 
+                                                        because of the highly left-skewed, caused by outliers so we do descrpitive analysis
+                                                        to make sure that the outliers are within the expected limit.
+                                                    </li>
+                                                    <li>
+                                                From the above summary statistics we can observe that skew is 
+                                                -53.7, which is (>2) and not acceptable, so we look further
+                                                into it by finding out the outliers that are contributing
+                                                the skew.
+                                                    </li>
+                                                    <li>
+                                                Since our dataset has more than 80 records, we use +/- 3.29 as our measure.
+                                                In that case we have 0.17% of values fall outside +/- 3.29. Therefore, it is 
+                                                okay to treat this as Normal.
+                                                    </li>
+                                                </ul>
+                                            </code>
+                                            
+                                        </p>
+                                    </div>
+                                  </div>
+                            </p>
+                            
+                        </li>
+                        <li><strong>For qr_pro:</strong>
+                            <p><strong>Inspection:</strong>
+                                <div class = 'container row'>
+                                    <div class= 'code-part col-8'>Descriptive Inspection:
+                                        <code>
+                                            <pre class='r'>
+> pastecs::stat.desc(s_perform$cr_pro, basic=F)
+median         mean      SE.mean CI.mean.0.95          var      std.dev     coef.var 
+67.0000000   62.2031275    0.2483775    0.4868585  765.3433389   27.6648394    0.4447500 
+> cr_proskew<-semTools::skew(s_perform$cr_pro)
+> cr_prokurt<-semTools::kurtosis(s_perform$cr_pro)
+> cr_proskew[1]/cr_proskew[2]
+skew (g1) 
+-23.51247 
+> cr_prokurt[1]/cr_prokurt[2]
+Excess Kur (g2) 
+-19.24985 
+> cr_pro<- abs(scale(s_perform$cr_pro))
+> FSA::perc(as.numeric(cr_pro), 1.96, "gt")
+[1] 3.651459
+> FSA::perc(as.numeric(cr_pro), 3.29, "gt")
+[1] 0
+                                            </pre>
+                                        </code>
+                                    </div>
+                                    <div class="output explore col-4">Output:
+                                      <img src="./img/Rplot19.png" alt="">
+                                      <img src="./img/Rplot20.png" alt="">
+        
+                                    </div>
+                                    <div class="result col-12">Result:
+                                        <p>
+                                            <code>
+                                                <ul>
+                                                    <li>
+                                                        From the density curve and the q-q plot we can assume through 
+                                                        visual inspection that the vairable maybe normal. But cannot confirm it 
+                                                        because of the skew, caused by outliers so we do descrpitive analysis
+                                                        to make sure that the outliers are within the expected limit.
+                                                    </li>
+                                                    <li>
+                                                From the above summary statistics we can observe that skew is 
+                                                -23.5, which is (>2) and not acceptable, so we look further
+                                                into it by finding out the outliers that are contributing
+                                                the skew.
+                                                    </li>
+                                                    <li>
+                                                Since our dataset has more than 80 records, we use +/- 3.29 as our measure.
+                                                In that case we have 0.% of values fall outside +/- 3.29. Therefore, it is 
+                                                okay to treat this as Normal.
+                                                    </li>
+                                                </ul>
+                                            </code>
+                                            
+                                        </p>
+                                    </div>
+                                  </div>
+                            </p>
+                            
+                        </li> -->
+                    </ul>  
+                    <h5>Reporting Normality for g_sc:</h5> 
+    <p>
+      g_sc was assessed for normality. Visual inspection of the histogram and QQ-Plot identified 
+      some issues with skewness and kurtosis. The standardised score for kurtosis (-1.72)
+      can be considered acceptable using the criteria proposed by West, Finch and Curran (1996), 
+      but the standardised score for skewness (-4.32)  was outside the
+      acceptable range.  However 100% of standardised scores for g_sc fall within the bounds
+      of +/- 3.29, using the guidance of Field, Miles and Field (2013) the data can be considered 
+      to approximate a normal distribution.
+    </p>
+                </li>  
+                    <li><strong>Missing Values:</strong>
+                    <p>
+                        <div class = 'container row'>
+                            <div class= 'code-part col-12'>Descriptive Inspection:
+                                <code>
+                                    <pre class='r'>
+> na_count
+cod_s11 gender edu_father edu_mother occ_father occ_mother stratum sisben people_house ...10 internet tv
+1       0      0          0          0          0          0       0      0            0   100        0  0
+computer washing_mch mic_oven car dvd fresh phone mobile revenue job school_name school_nat school_type
+1        0           0        0   0   0     0     0      0       0   0           0          0           0
+mat_s11 cr_s11 cc_s11 bio_s11 eng_s11 cod_spro university academic_program qr_pro cr_pro cc_pro eng_pro
+1       0      0      0       0       0        0          0                0      0      0      0       0
+wc_pro fep_pro g_sc percentile X2nd_decile quartile sel sel_ihe
+1      0       0    0          0           0        0   0       0
+
+s_perform <- filter(s_perform, s_perform$school_type !='Not apply')
+s_perform
+                                    </pre>
+                                </code>
+                            </div>
+                            <div class="result col-12">Result:
+                                <p>
+                                    <code>
+                                        <ul>
+                                            <li>
+                                                From the output above, we can conclude that the dataset doesn’t have any significant missing values except for one column “…10” which doesn’t have any significant meaning. So we ignore that as we are not interested in that column for our analysis.
+                                            </li>
+                                            <li>
+                                                The outlier records with 'not apply' are removed here to avoid their influence on the model
+                                            </li>
+                                        </ul>
+                                    </code>
+                                    
+                                </p>
+                            </div>
+                          </div>
+                    </p></li>
+                
+                </ul>
+            </p>
+        </div>   
+
+           <div class = 'section_3'>
+            <h2><strong>Section 3 - Results</strong></h2>
+            <p>
+                <h3><strong>Section 3.1 - Statistical evidence</strong></h3>
+                <ul>
+                <li><strong>Checking for correlation between predictors and dependent variable.</strong></li>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The predictors are chosen with the help of a correlation test, this is done to identify some kind of relationship between the predictor and the dependent variable. If there exists a moderate/high correlation then we can assume that variable to be a predictor.</p>
+                
+                <ul>
+                    <li><strong>Correlation between global score and Quantitative reasoning</strong>
+                        <p><strong>Null Hypothesis:</strong>&nbsp;The population correlation coefficient between g_sc and qr_pro is equal to a hypothesized value (=0 indicating no linear correlation)<br /> <strong>Alternate Hypothesis:</strong>&nbsp;The population correlation coefficient between g_sc and qr_pro is not equal (or less than, or greater than) the hypothesized value(indicating linear correlation)</p>
+                        <p><strong>&nbsp;</strong></p>
+                        <div class = 'container row'>
+                            <div class= 'code-part col-8'>Descriptive Inspection:
+                                <code>
+                                    <pre class='r'>
+    > stats::cor.test(s_perform$g_sc, s_perform$qr_pro, method='pearson')
+
+    Pearson's product-moment correlation
+
+data:  s_perform$g_sc and s_perform$qr_pro
+t = 109.1, df = 12404, p-value < 2.2e-16
+alternative hypothesis: true correlation is not equal to 0
+95 percent confidence interval:
+    0.6906862 0.7086488
+sample estimates:
+        cor 
+0.6997781 
+                                    </pre>
+                                </code>
+                            </div>
+                            <div class="output explore col-4">Output:
+                              <img src="./img/Rplot23.png" alt="">
+
+                            </div>
+                            <div class="result col-12">Result:
+                                <p>
+                                    <code>
+                                        <ul>
+                                            <p>We can observe from the graph that there is a moderate positive linear correlation, which implies we have satisfied our assumptions for pearson test they are:</p>
+<ul>
+<li>Correlation requires that both variables be quantitative.</li>
+<li>Correlation describes linear relationships.</li>
+</ul>
+<p><br /> From Pearson correlation,we get a correlation of 0.70, which means the effect size is medium(Acc. to cohen's effect size heuristic).<br /> Assuming our alpha level = 0.05, our p-value(0.001) &lt; 0.05 =&gt; The correlation is statistically significant.<br /> And so we have evidence to reject null hypothesis in favour of the alternate which is there is a relationship between&nbsp;<strong>g_sc and qr_pro.</strong> So, we can use qr_pro as one of the predictors</p>
+<ul>
+                                        </ul>
+                                    </code>
+                                    
+                                </p>
+                            </div>
+                          </div>
+                          <h5>Report for Correlation between global score and Quantitative reasoning:</h5> 
+<p>
+The relationship between g_sc(global score achieved by students) and
+qr_pro(Quantitative reasoning achieved in University) was investigated using a Pearson correlation. 
+A positive correlation was found(r=0.70,n=12404,p< 0.001).
+</p>
+                    </li>
+                    <li><strong>Correlation between global score and Critical Reading:</strong>
+<p><strong>Null Hypothesis:</strong>&nbsp;The population correlation coefficient between g_sc and cr_pro is equal to a hypothesized value (=0 indicating no linear correlation)<br /> <strong>Alternate Hypothesis:</strong>&nbsp;The population correlation coefficient between g_sc and cr_pro is not equal (or less than, or greater than) the hypothesized value(indicating linear correlation)</p>
+
+                        <div class = 'container row'>
+                            <div class= 'code-part col-8'>Descriptive Inspection:
+                                <code>
+                                    <pre class='r'>
+    > stats::cor.test(s_perform$g_sc, s_perform$cr_pro, method='pearson')
+
+    Pearson's product-moment correlation
+
+data:  s_perform$g_sc and s_perform$cr_pro
+t = 141.79, df = 12404, p-value < 2.2e-16
+alternative hypothesis: true correlation is not equal to 0
+95 percent confidence interval:
+    0.7796011 0.7930323
+sample estimates:
+        cor 
+0.7864097 
+                                    </pre>
+                                </code>
+                            </div>
+                            <div class="output explore col-4">Output:
+                              <img src="./img/Rplot24.png" alt="">
+
+                            </div>
+                            <div class="result col-12">Result:
+                                <p>
+                                    <code>
+                                        <ul>
+                                            <p>We can observe from the graph that there is a high positive linear correlation, which implies we have satisfied our assumptions for pearson test they are:</p>
+<ul>
+<li>Correlation requires that both variables be quantitative.</li>
+<li>Correlation describes linear relationships.</li>
+</ul>
+<p><br /> From Pearson correlation,we get a correlation of 0.79, which means the effect size is large(Acc. to cohen's effect size heuristic).<br /> Assuming our alpha level = 0.05, our p-value(0.001) &lt; 0.05 =&gt; The correlation is statistically significant.<br /> And so we have evidence to reject null hypothesis in favour of the alternate which is there is a relationship between&nbsp;<strong>g_sc and cr_pro.</strong> So, we can use cr_pro as one of the predictors</p>
+
+                                        </ul>
+                                    </code>
+                                    
+                                </p>
+                            </div>
+                          </div>
+                          <h5>Report for Correlation between global score and Critical Reading:</h5> 
+<p>
+The relationship between g_sc(global score achieved by students) and
+cr_pro(Critical Reading achieved in University) was investigated using a Pearson correlation. 
+A strong positive correlation was found(r=0.79,n=12404,p< 0.001).
+</p>
+                    </li>
+
+                </ul>
+                <li><strong>T-test for differential variable.</strong>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;The t test tells you how significant the differences between groups are; In other words it lets you know if those differences (measured in means) could have happened by chance.</p>
+
+                    <p><strong>Hypothesis (Two-tailed):</strong></p>
+                    <p><strong>Null Hypothesis H0:&nbsp;</strong>There is no difference in mean g_sc score between those who went to a private and public school.</p>
+                    <p><strong>Alternate Hypothesis HA:&nbsp;</strong>There is a difference in mean g_sc score between those who went to a private and public school.</p>
+                    <div class = 'container row'>
+                        <div class= 'code-part col-12'>Output:
+                            <code>
+                                <pre class='r'>
+    > psych::describeBy(s_perform$g_sc, s_perform$school_nat, mat=TRUE)
+    item  group1 vars    n     mean       sd median  trimmed     mad min max range        skew    kurtosis
+X11    1 PRIVATE    1 6560 168.2293 22.81689    170 168.7494 23.7216  37 247   210 -0.20320838  0.02354186
+X12    2  PUBLIC    1 5846 156.5281 21.83817    157 156.5667 22.2390  72 228   156 -0.05215938 -0.01912125
+            se
+X11 0.2817115
+X12 0.2856189
+> car::leveneTest(g_sc ~ school_nat, data=s_perform)
+Levene's Test for Homogeneity of Variance (center = median)
+            Df F value    Pr(>F)    
+group     1  12.514 0.0004054 ***
+        12404                      
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+> stats::t.test(g_sc ~ school_nat,var.equal=FALSE,data=s_perform)
+
+    Welch Two Sample t-test
+
+data:  g_sc by school_nat
+t = 29.168, df = 12341, p-value < 2.2e-16
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+    10.91485 12.48758
+sample estimates:
+mean in group PRIVATE  mean in group PUBLIC 
+                168.2293              156.5281 
+
+Since homogeneity failed we are setting var.equal to FALSE as there is no equal means
+
+> res <- stats::t.test(g_sc ~ school_nat,var.equal=FALSE,data=s_perform)
+> effcd=round((2*res$statistic)/sqrt(res$parameter),2)
+> effectsize::t_to_d(t = res$statistic, res$parameter)
+    d |       95% CI
+-------------------
+0.53 | [0.49, 0.56]
+> effes=round((res$statistic*res$statistic)/((res$statistic*res$statistic)+(res$parameter)),3)
+> effes
+    t 
+0.064 
+                                </pre>
+                            </code>
+                        </div>
+                        <div class="result col-12">Result:
+                            <p>
+                                <code>
+                                    <ul>
+                                        <li>
+                                            Levene's Test: For homogeneity of variance
+
+Null Hypothesis: All variances are equal.
+Alternate Hypothesis: All variances are not equal.
+From the test, we can see Pr(>F) is 0.01,which is less than 0.05, so it is statistically significant, thus rejecting null hypothesis(Homogeneity).
+
+                                        </li>
+                                        <li>Cohens-d value = 0.53, which implies a medium effect size.</li>
+                                        <li>eta value = 0.064, which implies a medium effect size.</li>
+                                        <li>Since the test was statistically significant it implies that the variable school_nat could act as a predictor for g_sc.</li>
+                                    </ul>
+                                </code>
+                                
+                            </p>
+                        </div>
+                      </div> 
+                      <h5>Report for T-test of school_nat variable:</h5> 
+<p>
+"An independent-samples t-test was conducted to compare the mean scores of g_sc for students  who studied 
+in Public and Private schools. A significant difference in the scores for g_sc was found (
+M=168.23, SD= 22.8 for students studied in Private schools, M= 156.53,SD= 21.83 for students who
+studied in Public Schools),(t(12404)= 29.17, p = 0.01). A medium effect size was also indicated by
+Cohen's d value (0.53)."
+</p>                  
+                </li>
+                </ul>   
+                <div class='model1'>
+
+                </ul>
+                <h3><strong>Section 3.2 &ndash; Model 1</strong></h3>
+                <p>
+                    <strong>
+<p>Research Question : Can we predict the global score of the student using their Quantitative Reasoning and Critical Reading?</p>
+<p><strong>Null Hypothesis:</strong>&nbsp;The values of g_sc cannot be predicted with the predictor variables(cr_pro, qr_pro) using Multiple linear Regression.</p>
+<p><strong>Alternate Hypothesis:</strong>&nbsp;<strong>:</strong>&nbsp;The values of g_sc can be predicted with the predictor variables(cr_pro, qr_pro) using Multiple linear Regression.</p>                    
+</strong>
+                </p>
+                <div class = 'container row'>
+                    <div class= 'code-part col-8'>Descriptive Inspection:
+                        <code>
+                            <pre class='r'>
+> model1<-lm(s_perform$g_sc~s_perform$qr_pro+s_perform$cr_pro)
+
+> stargazer(model1, type="text") 
+
+=================================================
+                            Dependent variable:     
+                    -----------------------------
+                                g_sc             
+-------------------------------------------------
+qr_pro                        0.380***           
+                                (0.006)           
+                                                    
+cr_pro                        0.480***           
+                                (0.005)           
+                                                    
+Constant                     103.484***          
+                                (0.398)           
+                                                    
+-------------------------------------------------
+Observations                   12,406            
+R2                              0.712            
+Adjusted R2                     0.712            
+Residual Std. Error      12.401 (df = 12403)     
+F Statistic         15,341.490*** (df = 2; 12403)
+=================================================
+
+> lm.beta(model1)
+
+Call:
+lm(formula = s_perform$g_sc ~ s_perform$qr_pro + s_perform$cr_pro)
+
+Standardized Coefficients::
+        (Intercept) s_perform$qr_pro s_perform$cr_pro 
+        0.0000000        0.3725515        0.5740398
+
+> vifmodel
+s_perform$qr_pro s_perform$cr_pro 
+        1.481366         1.481366 
+> #Tolerance
+> 1/vifmodel
+s_perform$qr_pro s_perform$cr_pro 
+        0.6750525        0.6750525
+                                
+                            </pre>
+                        </code>
+                    </div>
+                    
+                    <div class="result col-4">Result:
+                        <p>
+                            <code>
+                                <ul>
+
+                                    <li>
+
+The p-value indicates our model is significant, so we can reject the null hypothesis and accept the alternate hypothesis that the values of g_sc can be predicted with the predictor variables(cr_pro, qr_pro) using Multiple linear Regression.
+
+                                    </li>
+                                    <li>
+                                        Increase marks in qr_pro and cr_pro appears to be associated with increase marks in g_sc.
+
+                                    </li>
+                                    <li>
+The F statistic looks at whether the model as whole is statistically significant.
+
+                                    </li>
+                                    <li>
+                                        In our case adjusted r 2 value 0.712, which means around 71.2% of the variance g_sc can be explained by cr_pro and qr_pro.
+
+                                    </li>
+                                    <li>
+                                        Our linear regression model is Predicted g_sc = 103 +  0.38*qr_pro + 0.48*cr_pro 
+
+                                    </li>
+                                    <li>
+                                        In our case using the standardised coefficents our model equation becomes: Predicted g_sc = 0 +  0.373*qr_pro + 0.574*cr_pro 
+
+                                    </li>
+
+                                </ul>
+                            </code>
+                            
+                        </p>
+                    </div>
+                    <hr>
+                    <h3>Assumptions:</h3>
+                    <div class="output explore col-12">Output:
+                        <div class="row">
+                            <div class="col-6"> 
+                                <strong>Cooks plot</strong>
+                                <img src="./img/Rplot11.png" alt="">
+                            </div>
+
+                            <div class="col-6">
+                                <p>
+                                    <strong>Leverage</strong>
+                                </p>
+                                <img src="./img/Rplot12.png" alt="">
+                            </div>
+                            <div class="col-6">
+                                <p>
+                                    <strong>Ressidual Fit</strong>
+
+                                </p>
+                      <img src="./img/Rplot13.png" alt="">
+                            </div>
+                            <div class="col-6">
+                                <p>
+                                    <strong>Standard Residual Fit</strong>
+
+                                </p>
+                      <img src="./img/Rplot14.png" alt="">
+
+                            </div>
+                            <div class="col-6">
+                                <p>
+                                    <strong>QQ Error distribution</strong>
+
+                                </p>
+                      <img src="./img/Rplot15.png" alt="">
+                          </div>
+                    <div class="col-6">
+                        <p>
+                            <strong>Histogram error distribution</strong>
+
+                        </p>
+                        <img src="./img/Rplot16.png" alt="">
+                           </div>
+                        </div>
+
+
+                    </div>
+                    <div class="result col-12">Result:
+                        <p>
+                            <code>
+                                <ul>
+                                    <li>
+                                        It can be observed that all the points are less than 1, So we don't have to worry about the outliers
+                                        </li>
+                                        <li>
+                                            We can see that there is no pattern and points are equally distributed, therefore homoscedasticity is not an concern
+                                        </li>
+                
+                                        <li>
+                                            Minimum and Maximum value is within the acceptable range(-3.29,+3.29) hence we do not have outliers.
+                Though the red lines are slightly distorted but this is not a huge problem
+                
+                                        </li>
+                                        <li>
+                We can see that the errors are normally distributed
+                
+                                        </li>
+                <li>
+                Both collinearity and tolerance were with the acceptable limits (VIF < 2.5 and tolerance > 0.4). So, we have no issues with Multi collinearity.
+                
+                </li>
+                                    </ul>
+                                    </code>
+                                    </p>
+                                    </div>
+                    
+                  </div>
+                  <h5>Reporting Multiple linear Regression(Model 1):</h5>
+<p>
+Multiple  regression  analysis  was  conducted  to  determine the global scores(g_sc).
+Scores of Quantitative Reasoning and Critical Reading were used as predictor variables.
+Examination of the histogram, normal P-P plot of standardised 
+residuals and the  scatterplot  of  the  dependent  variable,  and
+standardised  residuals  showed  that  some  outliers  existed.  However,
+examination  of  the  standardised  residuals  showed  that  some  could  be
+considered to have undue influence (95% within limits of -1.96 to plus 1.96
+and none with Cook’s distance >1 as outlined in Field (2013).
+Examination  for  multicollinearity  showed  that  the  tolerance  and  variance
+influence factor measures were within acceptable levels (tolerance >0.4, VIF
+< 2.5 ) as outlined in Tarling (2008). The scatterplot of standardised residuals
+showed that the data met the assumptions of homogeneity of variance and
+linearity.  The  data  also  meets  the  assumption  of  non-zero  variances  of  the
+predictors. 
+</p>
+            </p>
+            <p>
+
+            </div>
+            <div class='model2'>
+ 
+                <h3><strong>Section 3.3 &ndash; Model 2</strong></h3>
+                <p>Research Question : Can we predict the global score of the student using their Quantitative Reasoning and Critical Reading with School Nature as dummy variable?</p>
+                <p>&nbsp;</p>
+                <p>Differential effect</p>
+                <ul>
+                <li>We use the variable school_nat as a predictor, since it is a categorical type we use it as a dummy variable to understand the differential effect of the global_scores of students studied in Private and Public schools.</li>
+                <li>Here, 0 (reference category, Private) and 1 (category of interest, Public)</li>
+                </ul>
+                <p><strong>Null Hypothesis</strong> The values of g_sc cannot be predicted with the predictor variables(cr_pro, qr_pro, school_nat) using Multiple linear Regression.</p>
+<p><strong>Alternate Hypothesis:</strong>&nbsp;<strong>:</strong>&nbsp;The values of g_sc can be predicted with the predictor variables(cr_pro, qr_pro, school_nat) using Multiple linear Regression.</p>
+<div class = 'container row'>
+    <div class= 'code-part col-8'>Descriptive Inspection:
+        <code>
+            <pre class='r'>
+
+> model2<-lm(s_perform$g_sc~s_perform$qr_pro+s_perform$cr_pro+s_perform$school_nat)
+
+> stargazer(model2, type="text") #Tidy output of all the required stats
+
+=================================================
+                            Dependent variable:     
+                    -----------------------------
+                                g_sc             
+-------------------------------------------------
+qr_pro                        0.368***           
+                                (0.006)           
+                                                    
+cr_pro                        0.471***           
+                                (0.005)           
+                                                    
+school_natPUBLIC              -5.134***          
+                                (0.222)           
+                                                    
+Constant                     107.329***          
+                                (0.424)           
+                                                    
+-------------------------------------------------
+Observations                   12,406            
+R2                              0.724            
+Adjusted R2                     0.724            
+Residual Std. Error      12.141 (df = 12402)     
+F Statistic         10,847.740*** (df = 3; 12402)
+=================================================
+Note:                 *p< 0.1; **p< 0.05; ***p< 0.01
+
+> lm.beta(model2)
+
+Call:
+lm(formula = s_perform$g_sc ~ s_perform$qr_pro + s_perform$cr_pro + 
+    s_perform$school_nat)
+
+Standardized Coefficients::
+                (Intercept)           s_perform$qr_pro           s_perform$cr_pro s_perform$school_natPUBLIC 
+                    0.0000000                  0.3614803                  0.5634178                 -0.1109039
+
+            </pre>
+        </code>
+    </div>
+    
+    <div class="result col-4">Result:
+        <p>
+            <code>
+                <ul>
+                    <li>
+The p-value indicates our model is significant, so we can reject the null hypothesis and accept the alternate hypothesis that the values of g_sc can be predicted with the predictor variables(cr_pro, qr_pro,school_nat) using Multiple linear Regression.
+
+                    </li>
+                    <li>
+                        Increased marks in qr_pro and cr_pro  appears to be associated with increase marks in g_sc.
+
+                    </li>
+                    <li>
+                        The F statistic looks at whether the model as whole is statistically significant.
+                    </li>
+                    <li>
+                        Our linear regression model is Predicted g_sc = 103 +  0.368*qr_pro + 0.471*cr_pro – 5.134*school_natPUBLIC
+
+                    </li>
+                    <li>
+                        In our case using the standardised coefficients our model equation becomes: Predicted g_sc = 0 +  0.361*qr_pro + 0.563*cr_pro  - 0.11* school_natPUBLIC
+
+                    </li>
+                    <li>
+                        When we calculate the equation for Public and Private schools:
+<br>
+Public   = 0+0.361+0.563-0.11=0.814 <br>
+                    Private=0+0.361+0.563 =0.924
+                    
+                    </li>
+                    <li>
+We can see a small difference between the group yes and no.
+
+                    </li>
+                    <li>
+We can see a slight change in the coefficent compared to model 1.
+
+                    </li>
+                    <li>
+In our case adjusted r 2 value 0.724, which means around 72.4% of the variance g_sc can be explained by cr_pro and qr_pro when a dummy variable school_nat is added. An increase compared to model 1.
+
+                    </li>
+                </ul>
+            </code>
+            
+        </p>
+    </div>
+    <hr>
+    <h3>Assumptions:</h3>
+    <div class="output explore col-12">Output:
+        <div class="row">
+            <div class="col-6"> 
+                <strong>Cooks plot</strong>
+                <img src="./img/Rplot25.png" alt="">
+            </div>
+
+            <div class="col-6">
+                <p>
+                    <strong>Leverage</strong>
+                </p>
+                <img src="./img/Rplot26.png" alt="">
+            </div>
+            <div class="col-6">
+                <p>
+                    <strong>Ressidual Fit</strong>
+
+                </p>
+      <img src="./img/Rplot27.png" alt="">
+            </div>
+            <div class="col-6">
+                <p>
+                    <strong>Standard Residual Fit</strong>
+
+                </p>
+      <img src="./img/Rplot28.png" alt="">
+
+            </div>
+            <div class="col-6">
+                <p>
+                    <strong>QQ Error distribution</strong>
+
+                </p>
+      <img src="./img/Rplot29.png" alt="">
+          </div>
+    <div class="col-6">
+        <p>
+            <img src="./img/Rplot30.png" alt="">
+
+        </p>
+        <strong>Histogram error distribution</strong>
+           </div>
+        </div>
+
+
+    </div>
+    <div class="result col-12">Result:
+        <p>
+            <code>
+                <ul>
+                    <li>
+                        It can be observed that all the points are less than 1, So we don't have to worry about the outliers
+                        </li>
+                        <li>
+                            We can see that there is no pattern and points are equally distributed, therefore homoscedasticity is not an concern
+                        </li>
+
+                        <li>
+                            Minimum and Maximum value is within the acceptable range(-3.29,+3.29) hence we do not have outliers.
+Though the red lines are slightly distorted but this is not a huge problem
+
+                        </li>
+                        <li>
+We can see that the errors are normally distributed
+
+                        </li>
+<li>
+Both collinearity and tolerance were with the acceptable limits (VIF < 2.5 and tolerance > 0.4). So, we have no issues with Multi collinearity.
+
+</li>
+<li>
+The differential effect in the global scores can be see between the students who studied in Public and Private.
+</li>
+                    </ul>
+                    </code>
+                    </p>
+                    </div>
+    
+  </div>
+  <h5>Reporting Multiple linear Regression(Model 2):</h5>
+<p>
+Multiple  regression  analysis  was  conducted  to  determine the global scores(g_sc).
+Scores of Quantitative Reasoning and Critical Reading were used as predictor variables.
+In  order  to  include  the  School Nature in the regression  model  it  was  recorded dummy variable
+school_nat  (0  for Private, 1 for Public).Examination of the histogram, normal P-P plot of standardised .
+Examination of the histogram, normal P-P plot of standardised 
+residuals and the  scatterplot  of  the  dependent  variable,  and
+standardised  residuals  showed  that  some  outliers  existed.  However,
+examination  of  the  standardised  residuals  showed  that  some  could  be
+considered to have undue influence (95% within limits of -1.96 to plus 1.96
+and none with Cook’s distance >1 as outlined in Field (2013).
+Examination  for  multicollinearity  showed  that  the  tolerance  and  variance
+influence factor measures were within acceptable levels (tolerance >0.4, VIF
+< 2.5 ) as outlined in Tarling (2008). The scatterplot of standardised residuals
+showed that the data met the assumptions of homogeneity of variance and
+linearity.  The  data  also  meets  the  assumption  of  non-zero  variances  of  the
+predictors. 
+</p>
+            </p>
+            </div>
+            <p>
+                <h2><strong>Section 3.3 &ndash; Model comparison</strong></h2>
+                <div class = 'container row'>
+                    <div class= 'code-part col-8'>Descriptive Inspection:
+                        <code>
+                            <pre class='r'>
+
+> stargazer(model1, model2, type="text") 
+
+===============================================================================
+                                        Dependent variable:                    
+                    -----------------------------------------------------------
+                                                g_sc                            
+                                    (1)                           (2)             
+-------------------------------------------------------------------------------
+qr_pro                        0.380***                      0.368***           
+                                (0.006)                       (0.006)           
+                                                                                
+cr_pro                        0.480***                      0.471***           
+                                (0.005)                       (0.005)           
+                                                                                
+school_natPUBLIC                                            -5.134***          
+                                                                (0.222)           
+                                                                                
+Constant                     103.484***                    107.329***          
+                                (0.398)                       (0.424)           
+                                                                                
+-------------------------------------------------------------------------------
+Observations                   12,406                        12,406            
+R2                              0.712                         0.724            
+Adjusted R2                     0.712                         0.724            
+Residual Std. Error      12.401 (df = 12403)           12.141 (df = 12402)     
+F Statistic         15,341.490*** (df = 2; 12403) 10,847.740*** (df = 3; 12402)
+===============================================================================
+Note:                                               *p< 0.1; **p < 0.05; ***p < 0.01
+                                
+                            </pre>
+                        </code>
+                    </div>
+                    
+                    <div class="result col-4">Result:
+                        <p>
+                            <code>
+                                <ul>
+                                  <li>Both the models are significant.</li>
+                                  <li>Model 1 adjusted R2 is 0.712 and model 2 adjusted R2 is 0.724</li>
+                                  <li>The adjusted R2 has changed by 1% after adding the dummy variable.</li>
+                                  <li>Adding the "students_nat" variable decreased the F-statistic of the model 1 and thus making model 2 more reliable</li>
+                                  <li>Beta values of the independent variables qr_pro(Model 1 = 0.38, Model 2 = 0.368), cr_pr(Model 1 =
+                                      0.480, Model 2 = 0.471), school_nat(Model 2 = -5.13).
+                                  </li>
+                                  <li>The coefficents have decreased slightly in model 2 compared to model 1</li>
+                                </ul>
+                            </code>
+                            
+                        </p>
+                    </div>
+                  </div>
+            </p>
+           </div>
+
+           <div class='section_4'>
+            <h2><strong>Section 4 &ndash; Discussion/Conclusion</strong></h2>
+            <p>
+                <ul>
+                    <li>
+                        Research question 1, was successfully answered by creating a model to predict the global scores and the necessary
+                        steps required to build said model are followed and the model is tested.
+                    </li>
+                    <li>Research question 2, was successfully answered by creating a model to predict the global scores and the differential effect
+                        of school_nat has been analysed and added to the model and the model is tested.</li>
+                    <li>
+                        New research questions can be developed using other variables in the dataset like
+                        the eng_s11, qr_s11, mat_s11 can be used to predict the eng_pro, qr_pro. 
+                    </li>
+                </ul>
+                
+            </p>
+           </div>
+
+
+      </div>
+</body>
+</html>

@@ -25,6 +25,12 @@
     /* border-bottom: 1px solid; */
 }
 img{
+    height: 220px;
+}
+.model1 img{
+    height: 300px;
+}
+.model2 img{
     height: 300px;
 }
 .prepare{
